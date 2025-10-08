@@ -1,0 +1,53 @@
+2025-10-08 08:42:17.324 [info] Log level: Info
+2025-10-08 08:42:17.324 [info] Validating found git in: "git"
+2025-10-08 08:42:17.324 [info] Using git "2.39.5" from "git"
+2025-10-08 08:42:17.324 [info] > git rev-parse --show-toplevel [10ms]
+2025-10-08 08:42:17.324 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.324 [info] > git rev-parse --show-toplevel [4ms]
+2025-10-08 08:42:17.324 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.324 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-08 08:42:17.324 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.324 [info] > git rev-parse --show-toplevel [15ms]
+2025-10-08 08:42:17.324 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.324 [info] > git rev-parse --show-toplevel [5ms]
+2025-10-08 08:42:17.324 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.324 [info] > git rev-parse --show-toplevel [7ms]
+2025-10-08 08:42:17.324 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.324 [info] > git rev-parse --show-toplevel [97ms]
+2025-10-08 08:42:17.324 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.326 [info] > git rev-parse --show-toplevel [15ms]
+2025-10-08 08:42:17.327 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.342 [info] > git rev-parse --show-toplevel [4ms]
+2025-10-08 08:42:17.342 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.355 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-08 08:42:17.356 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.371 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-08 08:42:17.371 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.398 [info] > git rev-parse --show-toplevel [13ms]
+2025-10-08 08:42:17.398 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.417 [info] > git rev-parse --show-toplevel [7ms]
+2025-10-08 08:42:17.417 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.431 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-08 08:42:17.431 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.445 [info] > git rev-parse --show-toplevel [4ms]
+2025-10-08 08:42:17.445 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.461 [info] > git rev-parse --show-toplevel [4ms]
+2025-10-08 08:42:17.461 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.482 [info] > git rev-parse --show-toplevel [7ms]
+2025-10-08 08:42:17.482 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.495 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-08 08:42:17.495 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.511 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-08 08:42:17.525 [info] > git rev-parse --git-dir --git-common-dir [3ms]
+2025-10-08 08:42:17.560 [info] Open repository: /home/pi/over-the-air
+2025-10-08 08:42:17.597 [info] > git config --get commit.template [14ms]
+2025-10-08 08:42:17.612 [info] > git rev-parse --show-toplevel [17ms]
+2025-10-08 08:42:17.612 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.626 [info] > git rev-parse --show-toplevel [2ms]
+2025-10-08 08:42:17.626 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-08 08:42:17.631 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [24ms]
+2025-10-08 08:42:17.708 [info] > git status -z -uall [61ms]
+2025-10-08 08:42:17.758 [info] > git config --get commit.template [1ms]
+2025-10-08 08:42:17.773 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [4ms]
+2025-10-08 08:42:17.801 [info] > git status -z -uall [17ms]
+2025-10-08 08:42:18.177 [info] > git check-ignore -v -z --stdin [4ms]

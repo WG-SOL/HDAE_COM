@@ -1,0 +1,11 @@
+2025-10-07 18:07:05.182 [info] 
+
+
+
+
+2025-10-07 18:07:05.236 [info] Extension host agent started.
+2025-10-07 18:07:05.454 [info] [127.0.0.1][10fa9e3d][ManagementConnection] New connection established.
+2025-10-07 18:07:05.479 [info] [127.0.0.1][ef7acd0c][ExtensionHostConnection] New connection established.
+2025-10-07 18:07:05.785 [info] [127.0.0.1][ef7acd0c][ExtensionHostConnection] <2288> Launched Extension Host Process.
+2025-10-07 18:12:05.243 [info] New EH opened, aborting shutdown
+2025-10-07 19:26:21.625 [info] [127.0.0.1][ef7acd0c][ExtensionHostConnection] The client has reconnected.

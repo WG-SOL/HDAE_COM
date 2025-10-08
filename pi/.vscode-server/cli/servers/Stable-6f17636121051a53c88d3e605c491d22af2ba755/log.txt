@@ -1,0 +1,117 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to /tmp/code-f4c33c0d-87d2-41f3-a5ed-a1630775ef73
+Extension host agent listening on /tmp/code-f4c33c0d-87d2-41f3-a5ed-a1630775ef73
+
+[10:08:31] 
+
+
+
+
+[10:08:32] Extension host agent started.
+[10:08:32] Started initializing default profile extensions in extensions installation folder. file:///home/pi/.vscode-server/extensions
+[10:08:32] [<unknown>][d0893879][ManagementConnection] New connection established.
+[10:08:32] [<unknown>][6c8b8ea4][ExtensionHostConnection] New connection established.
+[10:08:32] Completed initializing default profile extensions in extensions installation folder. file:///home/pi/.vscode-server/extensions
+[10:08:32] [<unknown>][6c8b8ea4][ExtensionHostConnection] <3073> Launched Extension Host Process.
+rejected promise not handled within 1 second: CodeExpectedError: Could not find pty 4 on pty host
+stack trace: CodeExpectedError: Could not find pty 4 on pty host
+    at I.W (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:46:6451)
+    at I.updateTitle (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:46:1839)
+    at s.<computed> (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:45:2938)
+    at Object.call (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:28:4204)
+    at vl.s (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:81574)
+    at vl.q (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:81097)
+    at ps.value (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:80499)
+    at E.C (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:2373)
+    at E.fire (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:2591)
+    at process.C (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:24:30159)
+    at process.emit (node:events:518:28)
+    at emit (node:internal/child_process:949:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)
+[10:08:35] Error [CodeExpectedError]: Could not find pty 4 on pty host
+    at I.W (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:46:6451)
+    at I.updateTitle (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:46:1839)
+    at s.<computed> (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:45:2938)
+    at Object.call (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:28:4204)
+    at vl.s (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:81574)
+    at vl.q (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:81097)
+    at ps.value (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:80499)
+    at E.C (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:2373)
+    at E.fire (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:2591)
+    at process.C (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:24:30159)
+    at process.emit (node:events:518:28)
+    at emit (node:internal/child_process:949:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)
+rejected promise not handled within 1 second: CodeExpectedError: Could not find pty 4 on pty host
+stack trace: CodeExpectedError: Could not find pty 4 on pty host
+    at I.W (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:46:6451)
+    at I.updateIcon (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:46:1889)
+    at s.<computed> (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:45:2938)
+    at Object.call (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:28:4204)
+    at vl.s (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:81574)
+    at vl.q (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:81097)
+    at ps.value (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:80499)
+    at E.C (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:2373)
+    at E.fire (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:2591)
+    at process.C (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:24:30159)
+    at process.emit (node:events:518:28)
+    at emit (node:internal/child_process:949:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)
+[10:08:35] Error [CodeExpectedError]: Could not find pty 4 on pty host
+    at I.W (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:46:6451)
+    at I.updateIcon (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:46:1889)
+    at s.<computed> (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:45:2938)
+    at Object.call (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:28:4204)
+    at vl.s (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:81574)
+    at vl.q (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:81097)
+    at ps.value (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:80499)
+    at E.C (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:2373)
+    at E.fire (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:2591)
+    at process.C (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:24:30159)
+    at process.emit (node:events:518:28)
+    at emit (node:internal/child_process:949:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)
+[10:08:41] [<unknown>][d0893879][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[10:08:41] [<unknown>][6c8b8ea4][ExtensionHostConnection] <3073> Extension Host Process exited with code: 0, signal: null.
+Cancelling previous shutdown timeout
+[10:08:41] Cancelling previous shutdown timeout
+Last EH closed, waiting before shutting down
+[10:08:41] Last EH closed, waiting before shutting down
+[10:08:46] [<unknown>][64cbef90][ExtensionHostConnection] New connection established.
+[10:08:46] [<unknown>][64cbef90][ExtensionHostConnection] <3178> Launched Extension Host Process.
+[10:08:46] [<unknown>][0bf0e06b][ManagementConnection] New connection established.
+rejected promise not handled within 1 second: CodeExpectedError: Could not find pty 2 on pty host
+stack trace: CodeExpectedError: Could not find pty 2 on pty host
+    at I.W (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:46:6451)
+    at I.updateTitle (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:46:1839)
+    at s.<computed> (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:45:2938)
+    at Object.call (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:28:4204)
+    at vl.s (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:81574)
+    at vl.q (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:81097)
+    at ps.value (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:80499)
+    at E.C (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:2373)
+    at E.fire (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:2591)
+    at process.C (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:24:30159)
+    at process.emit (node:events:518:28)
+    at emit (node:internal/child_process:949:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)
+[10:08:48] Error [CodeExpectedError]: Could not find pty 2 on pty host
+    at I.W (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:46:6451)
+    at I.updateTitle (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:46:1839)
+    at s.<computed> (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:45:2938)
+    at Object.call (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:28:4204)
+    at vl.s (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:81574)
+    at vl.q (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:81097)
+    at ps.value (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:80499)
+    at E.C (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:2373)
+    at E.fire (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:26:2591)
+    at process.C (file:///home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/server/out/vs/platform/terminal/node/ptyHostMain.js:24:30159)
+    at process.emit (node:events:518:28)
+    at emit (node:internal/child_process:949:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)

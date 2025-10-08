@@ -1,0 +1,92 @@
+2025-10-06 10:08:49.248 [info] [main] Log level: Info
+2025-10-06 10:08:49.248 [info] [main] Validating found git in: "git"
+2025-10-06 10:08:49.248 [info] [main] Using git "2.39.5" from "git"
+2025-10-06 10:08:49.248 [info] [Model][doInitialScan] Initial repository scan started
+2025-10-06 10:08:49.248 [info] > git rev-parse --show-toplevel [11ms]
+2025-10-06 10:08:49.248 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.263 [info] > git rev-parse --show-toplevel [4ms]
+2025-10-06 10:08:49.263 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.274 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-06 10:08:49.274 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.286 [info] > git rev-parse --show-toplevel [4ms]
+2025-10-06 10:08:49.286 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.330 [info] > git rev-parse --show-toplevel [8ms]
+2025-10-06 10:08:49.330 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.349 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-06 10:08:49.349 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.358 [info] > git rev-parse --show-toplevel [4ms]
+2025-10-06 10:08:49.358 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.368 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-06 10:08:49.368 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.378 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-06 10:08:49.378 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.390 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-06 10:08:49.390 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.398 [info] > git rev-parse --show-toplevel [2ms]
+2025-10-06 10:08:49.399 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.413 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-06 10:08:49.413 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.425 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-06 10:08:49.425 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.433 [info] > git rev-parse --show-toplevel [2ms]
+2025-10-06 10:08:49.434 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.442 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-06 10:08:49.442 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.459 [info] > git rev-parse --show-toplevel [11ms]
+2025-10-06 10:08:49.459 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.474 [info] > git rev-parse --show-toplevel [4ms]
+2025-10-06 10:08:49.474 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:08:49.485 [info] > git rev-parse --show-toplevel [4ms]
+2025-10-06 10:08:49.564 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [70ms]
+2025-10-06 10:08:49.601 [info] [Model][openRepository] Opened repository (path): /home/pi/over-the-air
+2025-10-06 10:08:49.601 [info] [Model][openRepository] Opened repository (real path): /home/pi/over-the-air
+2025-10-06 10:08:49.601 [info] [Model][openRepository] Opened repository (kind): repository
+2025-10-06 10:08:49.614 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2025-10-06 10:08:49.639 [info] > git config --get commit.template [16ms]
+2025-10-06 10:08:49.663 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [17ms]
+2025-10-06 10:08:49.670 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/pi/over-the-air/.git/refs/remotes/origin/main'
+2025-10-06 10:08:49.675 [info] > git rev-parse refs/remotes/origin/main [5ms]
+2025-10-06 10:08:49.697 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [4ms]
+2025-10-06 10:08:49.818 [info] > git status -z -uall [134ms]
+2025-10-06 10:08:49.969 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [53ms]
+2025-10-06 10:08:49.991 [info] > git config --get --local branch.main.vscode-merge-base [13ms]
+2025-10-06 10:08:49.991 [warning] [Git][config] git config failed: Failed to execute git
+2025-10-06 10:08:49.999 [info] > git config --get commit.template [32ms]
+2025-10-06 10:08:50.010 [info] > git reflog main --grep-reflog=branch: Created from *. [10ms]
+2025-10-06 10:08:50.017 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [10ms]
+2025-10-06 10:08:50.023 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/pi/over-the-air/.git/refs/remotes/origin/main'
+2025-10-06 10:08:50.024 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [9ms]
+2025-10-06 10:08:50.031 [info] > git rev-parse refs/remotes/origin/main [8ms]
+2025-10-06 10:08:50.045 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [16ms]
+2025-10-06 10:08:50.055 [info] > git status -z -uall [17ms]
+2025-10-06 10:08:50.057 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [14ms]
+2025-10-06 10:08:50.069 [info] > git config --add --local branch.main.vscode-merge-base origin/main [16ms]
+2025-10-06 10:08:50.100 [info] > git config --get commit.template [9ms]
+2025-10-06 10:08:50.102 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [5ms]
+2025-10-06 10:08:50.107 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/pi/over-the-air/.git/refs/remotes/origin/main'
+2025-10-06 10:08:50.110 [info] > git rev-parse refs/remotes/origin/main [3ms]
+2025-10-06 10:08:50.126 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [4ms]
+2025-10-06 10:08:50.129 [info] > git status -z -uall [14ms]
+2025-10-06 10:08:50.151 [info] > git merge-base refs/heads/main refs/remotes/origin/main [10ms]
+2025-10-06 10:08:50.163 [info] > git merge-base refs/heads/main refs/remotes/origin/main [15ms]
+2025-10-06 10:08:50.171 [info] > git diff --name-status -z --diff-filter=ADMR df876a975a63bd507ebd2952dd434e2eebb27de3...refs/remotes/origin/main [11ms]
+2025-10-06 10:08:50.174 [info] > git diff --name-status -z --diff-filter=ADMR df876a975a63bd507ebd2952dd434e2eebb27de3...refs/remotes/origin/main [5ms]
+2025-10-06 10:08:50.321 [info] > git check-ignore -v -z --stdin [3ms]
+2025-10-06 10:08:51.374 [info] > git config --get commit.template [8ms]
+2025-10-06 10:08:51.376 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [4ms]
+2025-10-06 10:08:51.382 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/pi/over-the-air/.git/refs/remotes/origin/main'
+2025-10-06 10:08:51.384 [info] > git rev-parse refs/remotes/origin/main [2ms]
+2025-10-06 10:08:51.400 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [4ms]
+2025-10-06 10:08:51.402 [info] > git status -z -uall [12ms]
+2025-10-06 10:08:52.022 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-06 10:08:52.022 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:15:03.798 [info] > git rev-parse --show-toplevel [13ms]
+2025-10-06 10:15:03.798 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:15:05.483 [info] > git rev-parse --show-toplevel [8ms]
+2025-10-06 10:15:05.484 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:15:12.003 [info] > git rev-parse --show-toplevel [5ms]
+2025-10-06 10:15:12.003 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:15:14.302 [info] > git rev-parse --show-toplevel [6ms]
+2025-10-06 10:15:14.302 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-10-06 10:15:21.122 [info] > git rev-parse --show-toplevel [7ms]
+2025-10-06 10:15:21.122 [info] fatal: not a git repository (or any of the parent directories): .git

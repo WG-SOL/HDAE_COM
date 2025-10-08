@@ -1,0 +1,5 @@
+Listening on 127.0.0.1:41275
+[2025-10-06 10:08:46] info Disposed of connection to running server.
+[2025-10-06 10:08:46] info Checking /home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/log.txt and /home/pi/.vscode-server/cli/servers/Stable-6f17636121051a53c88d3e605c491d22af2ba755/pid.txt for a running server...
+[2025-10-06 10:08:46] info Found running server (pid=3041)
+[2025-10-06 10:38:12] info Disposed of connection to running server.

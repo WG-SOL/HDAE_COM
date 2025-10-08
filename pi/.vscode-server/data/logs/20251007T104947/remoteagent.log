@@ -1,0 +1,39 @@
+2025-10-07 10:49:47.427 [info] 
+
+
+
+
+2025-10-07 10:49:47.469 [info] Extension host agent started.
+2025-10-07 10:49:47.642 [info] [127.0.0.1][0efae577][ManagementConnection] New connection established.
+2025-10-07 10:49:47.658 [info] [127.0.0.1][ec84a96c][ExtensionHostConnection] New connection established.
+2025-10-07 10:49:47.911 [info] [127.0.0.1][ec84a96c][ExtensionHostConnection] <2011> Launched Extension Host Process.
+2025-10-07 10:49:54.524 [info] [127.0.0.1][0efae577][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2025-10-07 10:49:54.598 [error] Error: Throttler is disposed
+    at r.queue (/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/server/node/server.main.js:70:13612)
+    at /home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/server/node/server.main.js:70:15183
+    at /home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/server/node/server.main.js:70:14822
+    at runNextTicks (node:internal/process/task_queues:61:5)
+    at processTimers (node:internal/timers:499:9)
+2025-10-07 10:49:54.636 [info] [127.0.0.1][ec84a96c][ExtensionHostConnection] <2011> Extension Host Process exited with code: 0, signal: null.
+2025-10-07 10:49:54.637 [info] Cancelling previous shutdown timeout
+2025-10-07 10:49:54.638 [info] Last EH closed, waiting before shutting down
+2025-10-07 10:50:00.341 [info] Got delay-shutdown request while in shutdown timeout, delaying
+2025-10-07 10:50:00.342 [info] Cancelling previous shutdown timeout
+2025-10-07 10:50:00.464 [info] [127.0.0.1][d7a2078a][ManagementConnection] New connection established.
+2025-10-07 10:50:00.512 [info] [127.0.0.1][84e2927c][ExtensionHostConnection] New connection established.
+2025-10-07 10:50:00.530 [info] [127.0.0.1][84e2927c][ExtensionHostConnection] <2117> Launched Extension Host Process.
+2025-10-07 10:50:02.969 [error] CodeExpectedError: Could not find pty on pty host
+    at g.P (/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/platform/terminal/node/ptyHostMain.js:28:7542)
+    at g.updateTitle (/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/platform/terminal/node/ptyHostMain.js:28:2693)
+    at g.B.<computed> (/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/platform/terminal/node/ptyHostMain.js:27:22689)
+    at Object.call (/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/platform/terminal/node/ptyHostMain.js:17:4867)
+    at l.s (/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/platform/terminal/node/ptyHostMain.js:15:5150)
+    at l.q (/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/platform/terminal/node/ptyHostMain.js:15:4661)
+    at i.value (/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/platform/terminal/node/ptyHostMain.js:15:4066)
+    at k.w (/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/platform/terminal/node/ptyHostMain.js:10:1902)
+    at k.fire (/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/platform/terminal/node/ptyHostMain.js:10:2119)
+    at process.X (/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/platform/terminal/node/ptyHostMain.js:8:27134)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:939:14)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+2025-10-07 10:55:00.344 [info] New EH opened, aborting shutdown
