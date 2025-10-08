@@ -1,0 +1,22 @@
+{
+  "logging": { "level": "debug", "console": "true" },
+
+  "unicast": "10.167.152.2",
+
+  "applications": [
+    { "name": "routingmanagerd", "id": "0x0100" },
+    { "name": "client-sample",   "id": "0x053f" }
+  ],
+
+  "routing": "routingmanagerd",
+
+  "service-discovery": {
+    "enable": true,
+    "multicast": "224.244.224.245",
+    "port": 30490,
+    "initial_delay_min": 0,
+    "initial_delay_max": 0,
+    "ttl": 3
+  }
+}
+

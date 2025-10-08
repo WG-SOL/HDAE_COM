@@ -1,0 +1,9 @@
+{
+  "unicast": "192.168.78.160",
+  "logging": { "level": "debug", "console": "true" },
+  "applications": [
+    { "name": "routingmanagerd", "id": "0xFFFF" }
+  ],
+  "routing": "routingmanagerd"
+}
+
