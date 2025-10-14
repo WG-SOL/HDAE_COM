@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include "ToF.h"
 void main (void)
 {
     SYSTEM_Init();
@@ -20,8 +20,8 @@ void main (void)
     UdpEchoInit();
     TcpEchoInit();
     DoIP_Init();
-    SOMEIP_Init();
-    SOMEIPSD_Init();
+//    SOMEIP_Init();
+//    SOMEIPSD_Init();
 
     uint8 dstAddr[6] = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff};
     uint8 data[39] = "Hyundai NGV School";

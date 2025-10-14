@@ -11,4 +11,9 @@ void Motor_movChB(int dir);
 void Motor_stopChB(void);
 void Motor_movChB_PWM(int duty, int dir);
 
+// --- 💡 여기가 추가된 부분입니다 ---
+int get_current_motor_duty(void);
+int get_current_motor_direction(void);
+// ------------------------------------
+
 #endif /* BSW_IO_MOTOR_H_ */

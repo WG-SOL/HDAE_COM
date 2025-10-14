@@ -24,8 +24,8 @@ void module_Init(void)
 
     /* Module Init */
     Asclin0_InitUart();
-    gpt12_Init();
-    Evadc_Init();
+    //gpt12_Init();
+    //Evadc_Init();
     Can_Init(BD_500K, CAN_NODE0);
-    CanFd_Init(BD_500K, HS_BD_2M, CANFD_NODE2);
+    //CanFd_Init(BD_500K, HS_BD_2M, CANFD_NODE2);
 }
