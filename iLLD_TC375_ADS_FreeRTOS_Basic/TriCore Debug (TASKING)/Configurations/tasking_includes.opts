@@ -1,0 +1,8 @@
+# auto-generated; do not edit by hand
+-I"${ProjDirPath}\BSW"
+-I"${ProjDirPath}\BSW\Driver"
+-I"${ProjDirPath}\BSW\IO"
+-I"${ProjDirPath}\lwip\src\include"
+-I"${ProjDirPath}\lwip\port\include"
+-I"${ProjDirPath}\Configurations"
+-I"${ProjDirPath}\Libraries\iLLD"
