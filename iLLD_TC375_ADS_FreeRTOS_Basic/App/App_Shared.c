@@ -1,7 +1,7 @@
 #include "App_Shared.h"
 #include <stdio.h>
 
-#define BLE_CMD_FIELD_COUNT    (9)
+#define BLE_CMD_FIELD_COUNT    (4)
 #define BLE_DUTY_DEADBAND      (5)
 #define DUTY_MIN               (0)
 #define DUTY_MAX               (100)
@@ -50,12 +50,12 @@ bool AppShared_ParseBleCommand(const char *line, DriveCommand *out_cmd)
 
     int left = 0;
     int right = 0;
-    int swL = 0, swR = 0, swH = 0, swP = 0, swLK = 0;
+    //int swL = 0, swR = 0, swH = 0, swP = 0, swLK = 0;
     int left_dir = 1;
     int right_dir = 1;
 
-    int parsed = sscanf(line, "%d;%d;%d;%d;%d;%d;%d;%d;%d",
-                        &left, &right, &swL, &swR, &swH, &swP, &swLK, &left_dir, &right_dir);
+    int parsed = sscanf(line, "%d;%d;%d;%d",
+                        &left, &right, &left_dir, &right_dir);
 
     if (parsed != BLE_CMD_FIELD_COUNT)
     {

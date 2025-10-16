@@ -7,6 +7,6 @@
 void AppComm_Init(void);
 void AppComm_HandleDriveCommandPayload(const uint8_t *payload, uint16_t length);
 
-#define APP_COMM_SOMEIP_METHOD_DRIVE_COMMAND   (0x0103U)
+#define APP_COMM_SOMEIP_METHOD_DRIVE_COMMAND   (0x0201U)
 
 #endif /* APP_COMM_H_ */
