@@ -21,7 +21,7 @@
 
 static TaskHandle_t g_someipTaskHandle = NULL;
 static bool g_offerSent = false;
-static eth_addr_t g_mac = { .addr = {0x02, 0x10, 0x37, 0x50, 0x00, 0x01} };
+static eth_addr_t g_mac = { .addr = {0x00, 0x00, 0x00, 0x11, 0x11, 0x12} };
 
 static void task_someip_service(void *arg);
 static void send_service_offer_once(void);

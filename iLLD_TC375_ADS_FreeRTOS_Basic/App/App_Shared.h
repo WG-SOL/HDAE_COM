@@ -41,4 +41,11 @@ void AppShared_SetAebActive(bool active);
 bool AppShared_IsAebActive(void);
 void AppShared_SetAebActiveFromIsr(bool active);
 
+void AppShared_SetDiagSession(bool active, TickType_t expire_tick);
+bool AppShared_IsDiagSessionActive(TickType_t now);
+
+void AppShared_SetMotorOverride(uint8_t dir, uint8_t speed);
+void AppShared_ClearMotorOverride(void);
+bool AppShared_GetMotorOverride(uint8_t *dir, uint8_t *speed);
+
 #endif /* APP_SHARED_H_ */

@@ -49,6 +49,10 @@ static void task_motor_control(void *arg)
         DriveCommand cmd;
         bool haveFresh = AppShared_GetCommandIfFresh(&cmd, now, staleTicks);
         bool aebActive = AppShared_IsAebActive();
+        bool diagActive = AppShared_IsDiagSessionActive(now);
+        uint8_t overrideDir = 0U;
+        uint8_t overrideSpeed = 0U;
+        bool haveOverride = AppShared_GetMotorOverride(&overrideDir, &overrideSpeed);
 
         int targetLeft = 0;
         int targetRight = 0;
@@ -56,7 +60,14 @@ static void task_motor_control(void *arg)
         int targetRightDir = 1;
 
         //cmd가 유효하면
-        if (haveFresh)
+        if (diagActive && haveOverride)
+        {
+            targetLeft = clampi(overrideSpeed, DUTY_MIN, DUTY_MAX);
+            targetRight = clampi(overrideSpeed, DUTY_MIN, DUTY_MAX);
+            targetLeftDir = overrideDir ? 1 : 0;
+            targetRightDir = overrideDir ? 1 : 0;
+        }
+        else if (haveFresh)
         {
             targetLeft = clampi(cmd.left_duty, DUTY_MIN, DUTY_MAX);
             targetRight = clampi(cmd.right_duty, DUTY_MIN, DUTY_MAX);

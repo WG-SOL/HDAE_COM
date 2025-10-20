@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc14528a --dep-file=App/App_Drive.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\App -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\BSW -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\BSW\\\\Driver -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\BSW\\\\IO -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\BSW\\\\etc -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Configurations -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\Phy_Dp83825i -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\port -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\port\\\\include -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\port\\\\include\\\\arch -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat\\\\posix -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat\\\\posix\\\\arpa -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat\\\\posix\\\\net -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat\\\\posix\\\\sys -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat\\\\stdc -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\lwip -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\lwip\\\\apps -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\lwip\\\\priv -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\lwip\\\\prot -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\netif -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\netif\\\\ppp -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\netif\\\\ppp\\\\polarssl -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric\\\\StdIf -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric\\\\SysSe -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Asc -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc\\\\Adc -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Geth -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Geth\\\\Eth -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Geth\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Io -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Lib -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Lib\\\\DataHandling -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\include -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3 -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\examples -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o App/App_Drive.src ../App/App_Drive.c"
+	.compiler_invocation	"ctc -f cc1600a --dep-file=App/App_Drive.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\App -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\BSW -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\BSW\\\\Driver -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\BSW\\\\IO -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\BSW\\\\etc -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Configurations -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\Phy_Dp83825i -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\port -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\port\\\\include -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\port\\\\include\\\\arch -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat\\\\posix -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat\\\\posix\\\\arpa -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat\\\\posix\\\\net -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat\\\\posix\\\\sys -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat\\\\stdc -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\lwip -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\lwip\\\\apps -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\lwip\\\\priv -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\lwip\\\\prot -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\netif -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\netif\\\\ppp -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\netif\\\\ppp\\\\polarssl -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric\\\\StdIf -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric\\\\SysSe -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Asc -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc\\\\Adc -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Geth -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Geth\\\\Eth -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Geth\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Io -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Lib -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Lib\\\\DataHandling -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\include -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3 -IC:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\examples -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o App/App_Drive.src ../App/App_Drive.c"
 	.compiler_name		"ctc"
 	;source	'../App/App_Drive.c'
 
@@ -12,29 +12,29 @@ $TC162
 	.align	2
 	
 ; Function vPortSetCCPN
-.L43:
+.L60:
 vPortSetCCPN:	.type	func
 	disable
-.L174:
+.L205:
 	mfcr	d15,#65068
-.L175:
+.L206:
 	insert	d0,d15,#0,#0,#8
-.L176:
+.L207:
 	and	d15,d4,#255
-.L177:
+.L208:
 	or	d0,d15
-.L178:
+.L209:
 	mtcr	#65068,d0
 	isync
-.L179:
+.L210:
 	enable
-.L180:
+.L211:
 	ret
-.L87:
+.L104:
 	
 __vPortSetCCPN_function_end:
 	.size	vPortSetCCPN,__vPortSetCCPN_function_end-vPortSetCCPN
-.L65:
+.L82:
 	; End of function
 	
 	.sdecl	'.text.portmacro.vPortSetICR',code,cluster('vPortSetICR')
@@ -42,21 +42,21 @@ __vPortSetCCPN_function_end:
 	.align	2
 	
 ; Function vPortSetICR
-.L45:
+.L62:
 vPortSetICR:	.type	func
 	disable
-.L185:
+.L216:
 	mtcr	#65068,d4
 	isync
-.L186:
+.L217:
 	enable
-.L187:
+.L218:
 	ret
-.L90:
+.L107:
 	
 __vPortSetICR_function_end:
 	.size	vPortSetICR,__vPortSetICR_function_end-vPortSetICR
-.L70:
+.L87:
 	; End of function
 	
 	.sdecl	'.text.portmacro.xPortSetCCPN',code,cluster('xPortSetCCPN')
@@ -64,31 +64,31 @@ __vPortSetICR_function_end:
 	.align	2
 	
 ; Function xPortSetCCPN
-.L47:
+.L64:
 xPortSetCCPN:	.type	func
 	disable
-.L192:
+.L223:
 	mfcr	d2,#65068
-.L132:
+.L155:
 	insert	d0,d2,#0,#0,#8
-.L193:
+.L224:
 	and	d15,d4,#255
-.L194:
+.L225:
 	or	d0,d15
-.L195:
+.L226:
 	mtcr	#65068,d0
 	isync
-.L196:
+.L227:
 	enable
-.L197:
+.L228:
 	j	.L2
 .L2:
 	ret
-.L92:
+.L109:
 	
 __xPortSetCCPN_function_end:
 	.size	xPortSetCCPN,__xPortSetCCPN_function_end-xPortSetCCPN
-.L75:
+.L92:
 	; End of function
 	
 	.sdecl	'.text.App_Drive.task_motor_control',code,cluster('task_motor_control')
@@ -96,194 +96,280 @@ __xPortSetCCPN_function_end:
 	.align	2
 	
 ; Function task_motor_control
-.L49:
+.L66:
 task_motor_control:	.type	func
 	sub.a	a10,#32
-.L99:
+.L116:
 	call	xTaskGetTickCount
-.L133:
+.L156:
 	st.w	[a10],d2
-.L202:
+.L233:
 	mov	d9,#10
-.L135:
+.L158:
 	mov	d10,#300
-.L136:
+.L159:
 	mov	d11,#0
-.L137:
+.L160:
 	mov	d12,#0
-.L138:
+.L161:
 	j	.L3
 .L4:
 .L5:
 	lea	a4,[a10]0
 	mov	d4,d9
-.L139:
+.L162:
 	call	xTaskDelayUntil
-.L110:
+.L127:
 	call	xTaskGetTickCount
-.L140:
-	lea	a4,[a10]4
-.L203:
-	mov	e4,d10,d2
-	call	AppShared_GetCommandIfFresh
-.L141:
+.L163:
 	mov	d8,d2
-.L143:
+.L165:
+	lea	a4,[a10]4
+.L234:
+	mov	e4,d10,d8
+	call	AppShared_GetCommandIfFresh
+.L164:
+	mov	d13,d2
+.L168:
 	call	AppShared_IsAebActive
-.L142:
+.L167:
+	mov	d14,d2
+.L170:
+	mov	d4,d8
+.L171:
+	call	AppShared_IsDiagSessionActive
+.L169:
+	mov	d8,d2
+.L166:
 	mov	d0,#0
-.L145:
-	mov	d1,#0
-.L146:
-	mov	d5,#1
-.L147:
-	mov	d15,#1
-.L148:
-	jeq	d8,#0,.L6
-.L204:
-	ld.w	d15,[a10]4
-.L149:
-	mov	d0,#100
-.L122:
-	jge	d15,#0,.L7
-.L205:
-	mov	d0,#0
-	j	.L8
-.L7:
-	jge	d0,d15,.L9
-.L206:
-	j	.L10
-.L9:
-	mov	d0,d15
-	j	.L11
-.L11:
-.L10:
-.L8:
-	ld.w	d15,[a10]8
-.L207:
-	mov	d1,#100
-.L130:
-	jge	d15,#0,.L12
-.L208:
-	mov	d1,#0
-	j	.L13
-.L12:
-	jge	d1,d15,.L14
-.L209:
-	j	.L15
-.L14:
-	mov	d1,d15
-	j	.L16
-.L16:
-.L15:
-.L13:
-	ld.w	d15,[a10]12
-.L210:
-	jeq	d15,#0,.L17
-.L211:
-	mov	d5,#1
-.L212:
-	j	.L18
-.L17:
-	mov	d5,#0
-.L18:
-	ld.w	d15,[a10]16
-.L213:
-	jeq	d15,#0,.L19
-.L214:
-	mov	d15,#1
-.L150:
-	j	.L20
-.L19:
+.L235:
+	st.b	[a10]28,d0
+.L236:
 	mov	d15,#0
-.L20:
-.L6:
-	jeq	d2,#0,.L21
-.L215:
-	jne	d5,#1,.L22
-.L216:
-	jne	d15,#1,.L23
-.L217:
-	mov	d0,#0
-.L218:
+.L237:
+	st.b	[a10]29,d15
+.L238:
+	lea	a4,[a10]28
+.L239:
+	lea	a5,[a10]29
+	call	AppShared_GetMotorOverride
+.L172:
 	mov	d1,#0
-.L23:
-.L22:
+.L174:
+	mov	d3,#0
+.L175:
+	mov	d5,#1
+.L176:
+	mov	d15,#1
+.L177:
+	jeq	d8,#0,.L6
+.L240:
+	jeq	d2,#0,.L7
+.L241:
+	ld.bu	d0,[a10]29
+.L242:
+	mov	d1,#100
+.L143:
+	jge	d0,#0,.L8
+.L243:
+	mov	d1,#0
+	j	.L9
+.L8:
+	jge	d1,d0,.L10
+.L244:
+	j	.L11
+.L10:
+	mov	d1,d0
+	j	.L12
+.L12:
+.L11:
+.L9:
+	ld.bu	d0,[a10]29
+.L245:
+	mov	d3,#100
+.L151:
+	jge	d0,#0,.L13
+.L246:
+	mov	d3,#0
+	j	.L14
+.L13:
+	jge	d3,d0,.L15
+.L247:
+	j	.L16
+.L15:
+	mov	d3,d0
+	j	.L17
+.L17:
+.L16:
+.L14:
+	ld.bu	d15,[a10]28
+.L178:
+	jeq	d15,#0,.L18
+.L248:
+	mov	d5,#1
+.L249:
+	j	.L19
+.L18:
+	mov	d5,#0
+.L19:
+	ld.bu	d15,[a10]28
+	jeq	d15,#0,.L20
+.L250:
+	mov	d15,#1
+.L179:
+	j	.L21
+.L20:
+	mov	d15,#0
 .L21:
-	jge	d11,d0,.L24
-.L219:
-	add	d11,#5
-.L220:
-	jge	d0,d11,.L25
-.L221:
-	mov	d11,d0
-.L25:
-	j	.L26
+	j	.L22
+.L7:
+.L6:
+	jeq	d13,#0,.L23
+.L251:
+	ld.w	d15,[a10]4
+.L180:
+	mov	d1,#100
+.L152:
+	jge	d15,#0,.L24
+.L252:
+	mov	d1,#0
+	j	.L25
 .L24:
-	jge	d0,d11,.L27
-.L222:
-	add	d11,#-5
-.L223:
-	jge	d11,d0,.L28
-.L224:
-	mov	d11,d0
-.L28:
-	j	.L29
-.L27:
-	mov	d11,d0
-.L29:
+	jge	d1,d15,.L26
+.L253:
+	j	.L27
 .L26:
-	jge	d12,d1,.L30
-.L225:
-	add	d12,#5
-.L226:
-	jge	d1,d12,.L31
-.L227:
-	mov	d12,d1
-.L31:
+	mov	d1,d15
+	j	.L28
+.L28:
+.L27:
+.L25:
+	ld.w	d15,[a10]8
+.L254:
+	mov	d3,#100
+.L153:
+	jge	d15,#0,.L29
+.L255:
+	mov	d3,#0
+	j	.L30
+.L29:
+	jge	d3,d15,.L31
+.L256:
 	j	.L32
-.L30:
-	jge	d1,d12,.L33
-.L228:
-	add	d12,#-5
-.L229:
-	jge	d12,d1,.L34
-.L230:
-	mov	d12,d1
-.L34:
-	j	.L35
+.L31:
+	mov	d3,d15
+	j	.L33
 .L33:
-	mov	d12,d1
-.L35:
 .L32:
-	jne	d11,#0,.L36
-.L231:
-	call	Motor_stopChA
-.L144:
+.L30:
+	ld.w	d15,[a10]12
+.L257:
+	jeq	d15,#0,.L34
+.L258:
+	mov	d5,#1
+.L259:
+	j	.L35
+.L34:
+	mov	d5,#0
+.L35:
+	ld.w	d15,[a10]16
+.L260:
+	jeq	d15,#0,.L36
+.L261:
+	mov	d15,#1
+.L181:
 	j	.L37
 .L36:
-	mov	d4,d11
-.L151:
-	call	Motor_movChA_PWM
+	mov	d15,#0
 .L37:
-	jne	d12,#0,.L38
-.L232:
-	call	Motor_stopChB
-.L233:
-	j	.L39
+.L23:
+.L22:
+	jeq	d14,#0,.L38
+.L262:
+	jne	d5,#1,.L39
+.L263:
+	jne	d15,#1,.L40
+.L264:
+	mov	d1,#0
+.L265:
+	mov	d3,#0
+.L40:
+.L39:
 .L38:
+	jge	d11,d1,.L41
+.L266:
+	add	d11,#5
+.L267:
+	jge	d1,d11,.L42
+.L268:
+	mov	d11,d1
+.L42:
+	j	.L43
+.L41:
+	jge	d1,d11,.L44
+.L269:
+	add	d11,#-5
+.L270:
+	jge	d11,d1,.L45
+.L271:
+	mov	d11,d1
+.L45:
+	j	.L46
+.L44:
+	mov	d11,d1
+.L46:
+.L43:
+	jge	d12,d3,.L47
+.L272:
+	add	d12,#5
+.L273:
+	jge	d3,d12,.L48
+.L274:
+	mov	d12,d3
+.L48:
+	j	.L49
+.L47:
+	jge	d3,d12,.L50
+.L275:
+	add	d12,#-5
+.L276:
+	jge	d12,d3,.L51
+.L277:
+	mov	d12,d3
+.L51:
+	j	.L52
+.L50:
+	mov	d12,d3
+.L52:
+.L49:
+	jne	d11,#0,.L53
+.L278:
+	call	Motor_stopChA
+.L173:
+	j	.L54
+.L53:
+	mov	d4,d11
+.L182:
+	call	Motor_movChA_PWM
+.L54:
+	jne	d12,#0,.L55
+.L279:
+	call	Motor_stopChB
+.L280:
+	j	.L56
+.L55:
 	mov	e4,d15,d12
 	call	Motor_movChB_PWM
-.L39:
+.L56:
 .L3:
 	j	.L4
-.L134:
+.L157:
 	ret
-.L96:
+.L113:
 	
 __task_motor_control_function_end:
 	.size	task_motor_control,__task_motor_control_function_end-task_motor_control
-.L80:
+.L97:
 	; End of function
 	
 	.sdecl	'.text.App_Drive.AppDrive_Init',code,cluster('AppDrive_Init')
@@ -292,44 +378,44 @@ __task_motor_control_function_end:
 	
 	.global	AppDrive_Init
 ; Function AppDrive_Init
-.L51:
+.L68:
 AppDrive_Init:	.type	func
 	movh.a	a15,#@his(g_driveTaskHandle)
 	lea	a15,[a15]@los(g_driveTaskHandle)
 	ld.w	d15,[a15]
-.L161:
-	jeq	d15,#0,.L40
-.L162:
-	j	.L41
-.L40:
+.L192:
+	jeq	d15,#0,.L57
+.L193:
+	j	.L58
+.L57:
 	call	Motor_Init
-.L163:
+.L194:
 	call	Motor_stopChA
-.L164:
+.L195:
 	call	Motor_stopChB
-.L84:
+.L101:
 	movh.a	a4,#@his(task_motor_control)
 	lea	a4,[a4]@los(task_motor_control)
-.L165:
+.L196:
 	movh.a	a5,#@his(.1.str)
 	lea	a5,[a5]@los(.1.str)
-.L166:
+.L197:
 	mov	d4,#512
-.L167:
+.L198:
 	mov.a	a6,#0
-.L168:
+.L199:
 	mov	d5,#6
-.L169:
+.L200:
 	movh.a	a7,#@his(g_driveTaskHandle)
 	lea	a7,[a7]@los(g_driveTaskHandle)
 	call	xTaskCreate
-.L41:
+.L58:
 	ret
-.L83:
+.L100:
 	
 __AppDrive_Init_function_end:
 	.size	AppDrive_Init,__AppDrive_Init_function_end-AppDrive_Init
-.L60:
+.L77:
 	; End of function
 	
 	.sdecl	'.data.App_Drive.g_driveTaskHandle',data,cluster('g_driveTaskHandle')
@@ -350,6 +436,8 @@ g_driveTaskHandle:	.type	object
 	.calls	'task_motor_control','xTaskDelayUntil'
 	.calls	'task_motor_control','AppShared_GetCommandIfFresh'
 	.calls	'task_motor_control','AppShared_IsAebActive'
+	.calls	'task_motor_control','AppShared_IsDiagSessionActive'
+	.calls	'task_motor_control','AppShared_GetMotorOverride'
 	.calls	'task_motor_control','Motor_stopChA'
 	.calls	'task_motor_control','Motor_movChA_PWM'
 	.calls	'task_motor_control','Motor_stopChB'
@@ -367,6 +455,8 @@ g_driveTaskHandle:	.type	object
 	.extern	xTaskGetTickCount
 	.extern	AppShared_GetCommandIfFresh
 	.extern	AppShared_IsAebActive
+	.extern	AppShared_IsDiagSessionActive
+	.extern	AppShared_GetMotorOverride
 	.extern	Motor_Init
 	.extern	Motor_stopChA
 	.extern	Motor_movChA_PWM
@@ -376,39 +466,39 @@ g_driveTaskHandle:	.type	object
 	.calls	'AppDrive_Init','',0
 	.sdecl	'.debug_info',debug
 	.sect	'.debug_info'
-.L53:
-	.word	2791
+.L70:
+	.word	2917
 	.half	3
-	.word	.L54
+	.word	.L71
 	.byte	4
-.L52:
+.L69:
 	.byte	1
 	.byte	'../App/App_Drive.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\USER\\Documents\\project2\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
 	.byte	1
-	.word	.L55
-.L105:
+	.word	.L72
+.L122:
 	.byte	2
 	.byte	'int',0,4,5
-.L121:
+.L142:
 	.byte	3
 	.byte	'clampi',0,3,1,18,19
 	.word	202
 	.byte	1,1
-.L123:
+.L144:
 	.byte	4
 	.byte	'value',0,1,18,30
 	.word	202
-.L125:
+.L146:
 	.byte	4
 	.byte	'lo',0,1,18,41
 	.word	202
-.L127:
+.L148:
 	.byte	4
 	.byte	'hi',0,1,18,49
 	.word	202
-.L129:
+.L150:
 	.byte	5,0,6
 	.byte	'__mtcr',0,1,1,1,1,7
 	.word	202
@@ -424,17 +514,17 @@ g_driveTaskHandle:	.type	object
 	.byte	0,10
 	.byte	'__disable',0,1,1,1,1,10
 	.byte	'__enable',0,1,1,1,1
-.L85:
+.L102:
 	.byte	2
 	.byte	'long int',0,4,5
-.L88:
+.L105:
 	.byte	2
 	.byte	'unsigned char',0,1,8
-.L94:
+.L111:
 	.byte	2
 	.byte	'unsigned int',0,4,7,11
 	.byte	'void',0
-.L97:
+.L114:
 	.byte	12
 	.word	389
 	.byte	13,1,1,7
@@ -460,7 +550,7 @@ g_driveTaskHandle:	.type	object
 	.byte	'unsigned long int',0,4,7,16
 	.byte	'tskTaskControlBlock',0,2,86,8,1,12
 	.word	513
-.L131:
+.L154:
 	.byte	14
 	.byte	'TaskHandle_t',0,2,87,38
 	.word	538
@@ -512,10 +602,10 @@ g_driveTaskHandle:	.type	object
 	.byte	'xTaskGetTickCount',0,2,163,11,12
 	.word	373
 	.byte	1,1,1,1
-.L114:
+.L131:
 	.byte	2
 	.byte	'_Bool',0,1,2
-.L112:
+.L129:
 	.byte	19,4,11,9,24,20
 	.byte	'left_duty',0
 	.word	202
@@ -551,7 +641,24 @@ g_driveTaskHandle:	.type	object
 	.byte	0,18
 	.byte	'AppShared_IsAebActive',0,4,41,6
 	.word	861
-	.byte	1,1,1,1,21
+	.byte	1,1,1,1,17
+	.byte	'AppShared_IsDiagSessionActive',0,4,45,6
+	.word	861
+	.byte	1,1,1,1,4
+	.byte	'now',0,4,45,47
+	.word	373
+	.byte	0,12
+	.word	356
+	.byte	17
+	.byte	'AppShared_GetMotorOverride',0,4,49,6
+	.word	861
+	.byte	1,1,1,1,4
+	.byte	'dir',0,4,49,42
+	.word	1177
+	.byte	4
+	.byte	'speed',0,4,49,56
+	.word	1177
+	.byte	0,21
 	.byte	'Motor_Init',0,5,4,6,1,1,1,1,21
 	.byte	'Motor_stopChA',0,5,7,6,1,1,1,1,22
 	.byte	'Motor_movChA_PWM',0,5,8,6,1,1,1,1,4
@@ -577,17 +684,17 @@ g_driveTaskHandle:	.type	object
 	.byte	24
 	.word	252
 	.byte	5,0
-.L101:
+.L118:
 	.byte	15
 	.word	373
-.L103:
+.L120:
 	.byte	15
 	.word	373
 	.byte	25
 	.byte	'__INDIRECT__',0,1,1,1,1,1,1,2
 	.byte	'short int',0,2,5,14
 	.byte	'__wchar_t',0,1,1,1
-	.word	1339
+	.word	1465
 	.byte	14
 	.byte	'__size_t',0,1,1,1
 	.word	373
@@ -595,10 +702,10 @@ g_driveTaskHandle:	.type	object
 	.byte	'__ptrdiff_t',0,1,1,1
 	.word	202
 	.byte	26,1,12
-	.word	1407
+	.word	1533
 	.byte	14
 	.byte	'__codeptr',0,1,1,1
-	.word	1409
+	.word	1535
 	.byte	14
 	.byte	'__intptr_t',0,1,1,1
 	.word	202
@@ -637,10 +744,10 @@ g_driveTaskHandle:	.type	object
 	.word	373
 	.byte	4,2,35,0,20
 	.byte	'pvDummy3',0
-	.word	1617
+	.word	1743
 	.byte	16,2,35,4,0,14
 	.byte	'StaticListItem_t',0,9,188,9,34
-	.word	1626
+	.word	1752
 	.byte	27,8
 	.word	395
 	.byte	28,1,0,29
@@ -649,10 +756,10 @@ g_driveTaskHandle:	.type	object
 	.word	373
 	.byte	4,2,35,0,20
 	.byte	'pvDummy3',0
-	.word	1712
+	.word	1838
 	.byte	8,2,35,4,0,14
 	.byte	'StaticMiniListItem_t',0,9,200,9,43
-	.word	1721
+	.word	1847
 	.byte	29
 	.byte	'xSTATIC_LIST',0,9,206,9,16,20,20
 	.byte	'uxDummy2',0
@@ -662,10 +769,10 @@ g_driveTaskHandle:	.type	object
 	.word	395
 	.byte	4,2,35,4,20
 	.byte	'xDummy4',0
-	.word	1721
+	.word	1847
 	.byte	12,2,35,8,0,14
 	.byte	'StaticList_t',0,9,217,9,3
-	.word	1816
+	.word	1942
 	.byte	27,12
 	.word	395
 	.byte	28,2,0,30,9,172,10,5,4,20
@@ -675,7 +782,7 @@ g_driveTaskHandle:	.type	object
 	.byte	'uxDummy2',0
 	.word	492
 	.byte	4,2,35,0,0,27,40
-	.word	1816
+	.word	1942
 	.byte	28,1,0,27,12
 	.word	492
 	.byte	28,2,0,27,2
@@ -683,88 +790,88 @@ g_driveTaskHandle:	.type	object
 	.byte	28,1,0,29
 	.byte	'xSTATIC_QUEUE',0,9,168,10,16,72,20
 	.byte	'pvDummy1',0
-	.word	1911
+	.word	2037
 	.byte	12,2,35,0,20
 	.byte	'u',0
-	.word	1920
+	.word	2046
 	.byte	4,2,35,12,20
 	.byte	'xDummy3',0
-	.word	1963
+	.word	2089
 	.byte	40,2,35,16,20
 	.byte	'uxDummy4',0
-	.word	1972
+	.word	2098
 	.byte	12,2,35,56,20
 	.byte	'ucDummy5',0
-	.word	1981
+	.word	2107
 	.byte	2,2,35,68,0,14
 	.byte	'StaticQueue_t',0,9,194,10,3
-	.word	1990
+	.word	2116
 	.byte	27,16
 	.word	373
 	.byte	28,3,0,29
 	.byte	'xSTATIC_STREAM_BUFFER',0,9,138,11,16,32,20
 	.byte	'uxDummy1',0
-	.word	2116
+	.word	2242
 	.byte	16,2,35,0,20
 	.byte	'pvDummy2',0
-	.word	1911
+	.word	2037
 	.byte	12,2,35,16,20
 	.byte	'ucDummy3',0
 	.word	356
 	.byte	1,2,35,28,0,14
 	.byte	'StaticStreamBuffer_t',0,9,149,11,3
-	.word	2125
+	.word	2251
 	.byte	12
-	.word	.L152-.L53
+	.word	.L183-.L70
 	.byte	8
 	.word	492
 	.byte	12
-	.word	.L152-.L53
+	.word	.L183-.L70
 	.byte	29
 	.byte	'xMINI_LIST_ITEM',0,10,157,1,12,12,20
 	.byte	'xItemValue',0
 	.word	373
 	.byte	4,2,35,0,20
 	.byte	'pxNext',0
-	.word	2238
+	.word	2364
 	.byte	4,2,35,4,20
 	.byte	'pxPrevious',0
-	.word	2238
+	.word	2364
 	.byte	4,2,35,8,0,29
 	.byte	'xLIST',0,10,172,1,16,20,20
 	.byte	'uxNumberOfItems',0
-	.word	2243
+	.word	2369
 	.byte	4,2,35,0,20
 	.byte	'pxIndex',0
-	.word	2248
+	.word	2374
 	.byte	4,2,35,4,20
 	.byte	'xListEnd',0
-	.word	2253
+	.word	2379
 	.byte	12,2,35,8,0,12
-	.word	2332
-.L152:
+	.word	2458
+.L183:
 	.byte	29
 	.byte	'xLIST_ITEM',0,10,144,1,8,20,20
 	.byte	'xItemValue',0
 	.word	373
 	.byte	4,2,35,0,20
 	.byte	'pxNext',0
-	.word	2238
+	.word	2364
 	.byte	4,2,35,4,20
 	.byte	'pxPrevious',0
-	.word	2238
+	.word	2364
 	.byte	4,2,35,8,20
 	.byte	'pvOwner',0
 	.word	395
 	.byte	4,2,35,12,20
 	.byte	'pxContainer',0
-	.word	2405
+	.word	2531
 	.byte	4,2,35,16,0,14
 	.byte	'ListItem_t',0,10,154,1,27
-	.word	2410
+	.word	2536
 	.byte	14
 	.byte	'MiniListItem_t',0,10,164,1,36
-	.word	2253
+	.word	2379
 	.byte	31,2,96,9,1,32
 	.byte	'eRunning',0,0,32
 	.byte	'eReady',0,1,32
@@ -773,7 +880,7 @@ g_driveTaskHandle:	.type	object
 	.byte	'eDeleted',0,4,32
 	.byte	'eInvalid',0,5,0,14
 	.byte	'eTaskState',0,2,104,3
-	.word	2566
+	.word	2692
 	.byte	29
 	.byte	'xMEMORY_REGION',0,2,128,1,16,12,20
 	.byte	'pvBaseAddress',0
@@ -786,14 +893,14 @@ g_driveTaskHandle:	.type	object
 	.word	373
 	.byte	4,2,35,8,0,14
 	.byte	'MemoryRegion_t',0,2,133,1,3
-	.word	2657
+	.word	2783
 	.byte	14
 	.byte	'DriveCommand',0,4,19,3
 	.word	870
 	.byte	0
 	.sdecl	'.debug_abbrev',debug
 	.sect	'.debug_abbrev'
-.L54:
+.L71:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,46,1,3,8,32,13,58,15,59,15
 	.byte	57,15,73,19,54,15,39,12,0,0,4,5,0,3,8,58,15,59,15,57,15,73,19,0,0,5,11,0,0,0,6,46,1,3,8,54,15,39,12,63
 	.byte	12,60,12,0,0,7,5,0,73,19,0,0,8,53,0,73,19,0,0,9,46,1,3,8,73,19,54,15,39,12,63,12,60,12,0,0,10,46,0,3,8
@@ -807,12 +914,12 @@ g_driveTaskHandle:	.type	object
 	.byte	1,58,15,59,15,57,15,11,15,0,0,32,40,0,3,8,28,13,0,0,0
 	.sdecl	'.debug_line',debug
 	.sect	'.debug_line'
-.L55:
-	.word	.L154-.L153
-.L153:
+.L72:
+	.word	.L185-.L184
+.L184:
 	.half	3
-	.word	.L156-.L155
-.L155:
+	.word	.L187-.L186
+.L186:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\include',0
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\BSW\\\\IO',0
@@ -829,748 +936,888 @@ g_driveTaskHandle:	.type	object
 	.byte	'portmacro.h',0,4,0,0
 	.byte	'FreeRTOS.h',0,1,0,0
 	.byte	'list.h',0,1,0,0,0
-.L156:
-.L154:
+.L187:
+.L185:
 	.sdecl	'.debug_info',debug,cluster('AppDrive_Init')
 	.sect	'.debug_info'
-.L56:
+.L73:
 	.word	279
 	.half	3
-	.word	.L57
+	.word	.L74
 	.byte	4,1
 	.byte	'../App/App_Drive.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\USER\\Documents\\project2\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
 	.byte	1
-	.word	.L59,.L58
+	.word	.L76,.L75
 	.byte	2
-	.word	.L52
+	.word	.L69
 	.byte	3
-	.byte	'AppDrive_Init',0,1,138,1,6,1,1,1
-	.word	.L51,.L83,.L50
+	.byte	'AppDrive_Init',0,1,149,1,6,1,1,1
+	.word	.L68,.L100,.L67
 	.byte	4
-	.word	.L51,.L83
+	.word	.L68,.L100
 	.byte	4
-	.word	.L84,.L83
+	.word	.L101,.L100
 	.byte	5
-	.byte	'ok',0,1,149,1,16
-	.word	.L85,.L86
+	.byte	'ok',0,1,160,1,16
+	.word	.L102,.L103
 	.byte	0,0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('AppDrive_Init')
 	.sect	'.debug_abbrev'
-.L57:
+.L74:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
 	.sdecl	'.debug_line',debug,cluster('AppDrive_Init')
 	.sect	'.debug_line'
-.L58:
-	.word	.L158-.L157
-.L157:
-	.half	3
-	.word	.L160-.L159
-.L159:
-	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
-	.byte	'../App/App_Drive.c',0,0,0,0,0
-.L160:
-	.byte	5,9,7,0,5,2
-	.word	.L51
-	.byte	3,139,1,1,5,5,9
-	.half	.L161-.L51
-	.byte	1,5,9,7,9
-	.half	.L162-.L161
-	.byte	3,2,1,5,15,9
-	.half	.L40-.L162
-	.byte	3,3,1,5,18,9
-	.half	.L163-.L40
-	.byte	3,1,1,9
-	.half	.L164-.L163
-	.byte	3,1,1,5,33,9
-	.half	.L84-.L164
-	.byte	3,2,1,9
-	.half	.L165-.L84
-	.byte	3,1,1,9
-	.half	.L166-.L165
-	.byte	3,1,1,9
-	.half	.L167-.L166
-	.byte	3,1,1,9
-	.half	.L168-.L167
-	.byte	3,1,1,5,34,9
-	.half	.L169-.L168
-	.byte	3,1,1,5,1,9
-	.half	.L41-.L169
-	.byte	3,2,1,7,9
-	.half	.L60-.L41
-	.byte	0,1,1
-.L158:
-	.sdecl	'.debug_ranges',debug,cluster('AppDrive_Init')
-	.sect	'.debug_ranges'
-.L59:
-	.word	-1,.L51,0,.L60-.L51,0,0
-	.sdecl	'.debug_info',debug,cluster('vPortSetCCPN')
-	.sect	'.debug_info'
-.L61:
-	.word	369
-	.half	3
-	.word	.L62
-	.byte	4,1
-	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
-	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Users\\USER\\Documents\\project2\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
-	.byte	1
-	.word	.L64,.L63
-	.byte	2
-	.word	.L52
-	.byte	3
-	.byte	'vPortSetCCPN',0,1,160,1,54,1,1
-	.word	.L43,.L87,.L42
-	.byte	4
-	.byte	'ucCCPN',0,1,160,1,82
-	.word	.L88,.L89
-	.byte	5
-	.word	.L43,.L87
-	.byte	0,0
-	.sdecl	'.debug_abbrev',debug,cluster('vPortSetCCPN')
-	.sect	'.debug_abbrev'
-.L62:
-	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
-	.byte	39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
-	.sdecl	'.debug_line',debug,cluster('vPortSetCCPN')
-	.sect	'.debug_line'
-.L63:
-	.word	.L171-.L170
-.L170:
-	.half	3
-	.word	.L173-.L172
-.L172:
-	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
-	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
-	.byte	0
-	.byte	'portmacro.h',0,1,0,0,0
-.L173:
-	.byte	5,14,7,0,5,2
-	.word	.L43
-	.byte	3,161,1,1,5,34,9
-	.half	.L174-.L43
-	.byte	3,1,1,5,50,9
-	.half	.L175-.L174
-	.byte	1,5,87,9
-	.half	.L176-.L175
-	.byte	1,5,76,9
-	.half	.L177-.L176
-	.byte	1,5,11,9
-	.half	.L178-.L177
-	.byte	1,5,13,9
-	.half	.L179-.L178
-	.byte	3,1,1,5,1,9
-	.half	.L180-.L179
-	.byte	3,1,1,7,9
-	.half	.L65-.L180
-	.byte	0,1,1
-.L171:
-	.sdecl	'.debug_ranges',debug,cluster('vPortSetCCPN')
-	.sect	'.debug_ranges'
-.L64:
-	.word	-1,.L43,0,.L65-.L43,0,0
-	.sdecl	'.debug_info',debug,cluster('vPortSetICR')
-	.sect	'.debug_info'
-.L66:
-	.word	367
-	.half	3
-	.word	.L67
-	.byte	4,1
-	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
-	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Users\\USER\\Documents\\project2\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
-	.byte	1
-	.word	.L69,.L68
-	.byte	2
-	.word	.L52
-	.byte	3
-	.byte	'vPortSetICR',0,1,167,1,54,1,1
-	.word	.L45,.L90,.L44
-	.byte	4
-	.byte	'ulICR',0,1,167,1,81
-	.word	.L85,.L91
-	.byte	5
-	.word	.L45,.L90
-	.byte	0,0
-	.sdecl	'.debug_abbrev',debug,cluster('vPortSetICR')
-	.sect	'.debug_abbrev'
-.L67:
-	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
-	.byte	39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
-	.sdecl	'.debug_line',debug,cluster('vPortSetICR')
-	.sect	'.debug_line'
-.L68:
-	.word	.L182-.L181
-.L181:
-	.half	3
-	.word	.L184-.L183
-.L183:
-	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
-	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
-	.byte	0
-	.byte	'portmacro.h',0,1,0,0,0
-.L184:
-	.byte	5,14,7,0,5,2
-	.word	.L45
-	.byte	3,168,1,1,5,11,9
-	.half	.L185-.L45
-	.byte	3,1,1,5,13,9
-	.half	.L186-.L185
-	.byte	3,1,1,5,1,9
-	.half	.L187-.L186
-	.byte	3,1,1,7,9
-	.half	.L70-.L187
-	.byte	0,1,1
-.L182:
-	.sdecl	'.debug_ranges',debug,cluster('vPortSetICR')
-	.sect	'.debug_ranges'
-.L69:
-	.word	-1,.L45,0,.L70-.L45,0,0
-	.sdecl	'.debug_info',debug,cluster('xPortSetCCPN')
-	.sect	'.debug_info'
-.L71:
-	.word	392
-	.half	3
-	.word	.L72
-	.byte	4,1
-	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
-	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Users\\USER\\Documents\\project2\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
-	.byte	1
-	.word	.L74,.L73
-	.byte	2
-	.word	.L52
-	.byte	3
-	.byte	'xPortSetCCPN',0,1,174,1,63
-	.word	.L85
-	.byte	1,1
-	.word	.L47,.L92,.L46
-	.byte	4
-	.byte	'ucCCPN',0,1,174,1,91
-	.word	.L88,.L93
-	.byte	5
-	.word	.L47,.L92
-	.byte	6
-	.byte	'xICR',0,1,176,1,14
-	.word	.L94,.L95
-	.byte	0,0,0
-	.sdecl	'.debug_abbrev',debug,cluster('xPortSetCCPN')
-	.sect	'.debug_abbrev'
-.L72:
-	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
-	.byte	54,15,39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3
-	.byte	8,58,15,59,15,57,15,73,16,2,6,0,0,0
-	.sdecl	'.debug_line',debug,cluster('xPortSetCCPN')
-	.sect	'.debug_line'
-.L73:
+.L75:
 	.word	.L189-.L188
 .L188:
 	.half	3
 	.word	.L191-.L190
 .L190:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../App/App_Drive.c',0,0,0,0,0
+.L191:
+	.byte	5,9,7,0,5,2
+	.word	.L68
+	.byte	3,150,1,1,5,5,9
+	.half	.L192-.L68
+	.byte	1,5,9,7,9
+	.half	.L193-.L192
+	.byte	3,2,1,5,15,9
+	.half	.L57-.L193
+	.byte	3,3,1,5,18,9
+	.half	.L194-.L57
+	.byte	3,1,1,9
+	.half	.L195-.L194
+	.byte	3,1,1,5,33,9
+	.half	.L101-.L195
+	.byte	3,2,1,9
+	.half	.L196-.L101
+	.byte	3,1,1,9
+	.half	.L197-.L196
+	.byte	3,1,1,9
+	.half	.L198-.L197
+	.byte	3,1,1,9
+	.half	.L199-.L198
+	.byte	3,1,1,5,34,9
+	.half	.L200-.L199
+	.byte	3,1,1,5,1,9
+	.half	.L58-.L200
+	.byte	3,2,1,7,9
+	.half	.L77-.L58
+	.byte	0,1,1
+.L189:
+	.sdecl	'.debug_ranges',debug,cluster('AppDrive_Init')
+	.sect	'.debug_ranges'
+.L76:
+	.word	-1,.L68,0,.L77-.L68,0,0
+	.sdecl	'.debug_info',debug,cluster('vPortSetCCPN')
+	.sect	'.debug_info'
+.L78:
+	.word	369
+	.half	3
+	.word	.L79
+	.byte	4,1
+	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\USER\\Documents\\project2\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L81,.L80
+	.byte	2
+	.word	.L69
+	.byte	3
+	.byte	'vPortSetCCPN',0,1,160,1,54,1,1
+	.word	.L60,.L104,.L59
+	.byte	4
+	.byte	'ucCCPN',0,1,160,1,82
+	.word	.L105,.L106
+	.byte	5
+	.word	.L60,.L104
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('vPortSetCCPN')
+	.sect	'.debug_abbrev'
+.L79:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('vPortSetCCPN')
+	.sect	'.debug_line'
+.L80:
+	.word	.L202-.L201
+.L201:
+	.half	3
+	.word	.L204-.L203
+.L203:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
 	.byte	0
 	.byte	'portmacro.h',0,1,0,0,0
-.L191:
+.L204:
 	.byte	5,14,7,0,5,2
-	.word	.L47
-	.byte	3,177,1,1,5,18,9
-	.half	.L192-.L47
-	.byte	3,1,1,5,33,9
-	.half	.L132-.L192
-	.byte	3,1,1,5,70,9
-	.half	.L193-.L132
-	.byte	1,5,59,9
-	.half	.L194-.L193
+	.word	.L60
+	.byte	3,161,1,1,5,34,9
+	.half	.L205-.L60
+	.byte	3,1,1,5,50,9
+	.half	.L206-.L205
+	.byte	1,5,87,9
+	.half	.L207-.L206
+	.byte	1,5,76,9
+	.half	.L208-.L207
 	.byte	1,5,11,9
-	.half	.L195-.L194
+	.half	.L209-.L208
 	.byte	1,5,13,9
-	.half	.L196-.L195
-	.byte	3,1,1,5,5,9
-	.half	.L197-.L196
+	.half	.L210-.L209
 	.byte	3,1,1,5,1,9
-	.half	.L2-.L197
+	.half	.L211-.L210
 	.byte	3,1,1,7,9
-	.half	.L75-.L2
+	.half	.L82-.L211
 	.byte	0,1,1
-.L189:
+.L202:
+	.sdecl	'.debug_ranges',debug,cluster('vPortSetCCPN')
+	.sect	'.debug_ranges'
+.L81:
+	.word	-1,.L60,0,.L82-.L60,0,0
+	.sdecl	'.debug_info',debug,cluster('vPortSetICR')
+	.sect	'.debug_info'
+.L83:
+	.word	367
+	.half	3
+	.word	.L84
+	.byte	4,1
+	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\USER\\Documents\\project2\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L86,.L85
+	.byte	2
+	.word	.L69
+	.byte	3
+	.byte	'vPortSetICR',0,1,167,1,54,1,1
+	.word	.L62,.L107,.L61
+	.byte	4
+	.byte	'ulICR',0,1,167,1,81
+	.word	.L102,.L108
+	.byte	5
+	.word	.L62,.L107
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('vPortSetICR')
+	.sect	'.debug_abbrev'
+.L84:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('vPortSetICR')
+	.sect	'.debug_line'
+.L85:
+	.word	.L213-.L212
+.L212:
+	.half	3
+	.word	.L215-.L214
+.L214:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
+	.byte	0
+	.byte	'portmacro.h',0,1,0,0,0
+.L215:
+	.byte	5,14,7,0,5,2
+	.word	.L62
+	.byte	3,168,1,1,5,11,9
+	.half	.L216-.L62
+	.byte	3,1,1,5,13,9
+	.half	.L217-.L216
+	.byte	3,1,1,5,1,9
+	.half	.L218-.L217
+	.byte	3,1,1,7,9
+	.half	.L87-.L218
+	.byte	0,1,1
+.L213:
+	.sdecl	'.debug_ranges',debug,cluster('vPortSetICR')
+	.sect	'.debug_ranges'
+.L86:
+	.word	-1,.L62,0,.L87-.L62,0,0
+	.sdecl	'.debug_info',debug,cluster('xPortSetCCPN')
+	.sect	'.debug_info'
+.L88:
+	.word	392
+	.half	3
+	.word	.L89
+	.byte	4,1
+	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\USER\\Documents\\project2\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L91,.L90
+	.byte	2
+	.word	.L69
+	.byte	3
+	.byte	'xPortSetCCPN',0,1,174,1,63
+	.word	.L102
+	.byte	1,1
+	.word	.L64,.L109,.L63
+	.byte	4
+	.byte	'ucCCPN',0,1,174,1,91
+	.word	.L105,.L110
+	.byte	5
+	.word	.L64,.L109
+	.byte	6
+	.byte	'xICR',0,1,176,1,14
+	.word	.L111,.L112
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('xPortSetCCPN')
+	.sect	'.debug_abbrev'
+.L89:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3
+	.byte	8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('xPortSetCCPN')
+	.sect	'.debug_line'
+.L90:
+	.word	.L220-.L219
+.L219:
+	.half	3
+	.word	.L222-.L221
+.L221:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\project2\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
+	.byte	0
+	.byte	'portmacro.h',0,1,0,0,0
+.L222:
+	.byte	5,14,7,0,5,2
+	.word	.L64
+	.byte	3,177,1,1,5,18,9
+	.half	.L223-.L64
+	.byte	3,1,1,5,33,9
+	.half	.L155-.L223
+	.byte	3,1,1,5,70,9
+	.half	.L224-.L155
+	.byte	1,5,59,9
+	.half	.L225-.L224
+	.byte	1,5,11,9
+	.half	.L226-.L225
+	.byte	1,5,13,9
+	.half	.L227-.L226
+	.byte	3,1,1,5,5,9
+	.half	.L228-.L227
+	.byte	3,1,1,5,1,9
+	.half	.L2-.L228
+	.byte	3,1,1,7,9
+	.half	.L92-.L2
+	.byte	0,1,1
+.L220:
 	.sdecl	'.debug_ranges',debug,cluster('xPortSetCCPN')
 	.sect	'.debug_ranges'
-.L74:
-	.word	-1,.L47,0,.L75-.L47,0,0
+.L91:
+	.word	-1,.L64,0,.L92-.L64,0,0
 	.sdecl	'.debug_info',debug,cluster('task_motor_control')
 	.sect	'.debug_info'
-.L76:
-	.word	748
+.L93:
+	.word	954
 	.half	3
-	.word	.L77
+	.word	.L94
 	.byte	4,1
 	.byte	'../App/App_Drive.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\USER\\Documents\\project2\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
 	.byte	1
-	.word	.L79,.L78
+	.word	.L96,.L95
 	.byte	2
-	.word	.L52
+	.word	.L69
 	.byte	3
 	.byte	'task_motor_control',0,1,31,13,1,1
-	.word	.L49,.L96,.L48
+	.word	.L66,.L113,.L65
 	.byte	4
 	.byte	'arg',0,1,31,38
-	.word	.L97,.L98
+	.word	.L114,.L115
 	.byte	5
-	.word	.L49,.L96
+	.word	.L66,.L113
 	.byte	5
-	.word	.L99,.L96
+	.word	.L116,.L113
 	.byte	6
 	.byte	'lastWake',0,1,35,16
-	.word	.L94,.L100
+	.word	.L111,.L117
 	.byte	6
 	.byte	'periodTicks',0,1,36,22
-	.word	.L101,.L102
+	.word	.L118,.L119
 	.byte	6
 	.byte	'staleTicks',0,1,37,22
-	.word	.L103,.L104
+	.word	.L120,.L121
 	.byte	6
 	.byte	'currentLeft',0,1,39,9
-	.word	.L105,.L106
+	.word	.L122,.L123
 	.byte	6
 	.byte	'currentRight',0,1,40,9
-	.word	.L105,.L107
+	.word	.L122,.L124
 	.byte	6
 	.byte	'currentLeftDir',0,1,41,9
-	.word	.L105,.L108
+	.word	.L122,.L125
 	.byte	6
 	.byte	'currentRightDir',0,1,42,9
-	.word	.L105,.L109
+	.word	.L122,.L126
 	.byte	5
-	.word	.L110,.L3
+	.word	.L127,.L3
 	.byte	6
 	.byte	'now',0,1,48,20
-	.word	.L94,.L111
+	.word	.L111,.L128
 	.byte	6
 	.byte	'cmd',0,1,49,22
-	.word	.L112,.L113
+	.word	.L129,.L130
 	.byte	6
 	.byte	'haveFresh',0,1,50,14
-	.word	.L114,.L115
+	.word	.L131,.L132
 	.byte	6
 	.byte	'aebActive',0,1,51,14
-	.word	.L114,.L116
+	.word	.L131,.L133
 	.byte	6
-	.byte	'targetLeft',0,1,53,13
-	.word	.L105,.L117
+	.byte	'diagActive',0,1,52,14
+	.word	.L131,.L134
 	.byte	6
-	.byte	'targetRight',0,1,54,13
-	.word	.L105,.L118
+	.byte	'overrideDir',0,1,53,17
+	.word	.L105,.L135
 	.byte	6
-	.byte	'targetLeftDir',0,1,55,13
-	.word	.L105,.L119
+	.byte	'overrideSpeed',0,1,54,17
+	.word	.L105,.L136
 	.byte	6
-	.byte	'targetRightDir',0,1,56,13
-	.word	.L105,.L120
+	.byte	'haveOverride',0,1,55,14
+	.word	.L131,.L137
+	.byte	6
+	.byte	'targetLeft',0,1,57,13
+	.word	.L122,.L138
+	.byte	6
+	.byte	'targetRight',0,1,58,13
+	.word	.L122,.L139
+	.byte	6
+	.byte	'targetLeftDir',0,1,59,13
+	.word	.L122,.L140
+	.byte	6
+	.byte	'targetRightDir',0,1,60,13
+	.word	.L122,.L141
 	.byte	7
-	.word	.L121,.L122,.L8
+	.word	.L142,.L143,.L9
 	.byte	8
-	.word	.L123,.L124
+	.word	.L144,.L145
 	.byte	8
-	.word	.L125,.L126
+	.word	.L146,.L147
 	.byte	8
-	.word	.L127,.L128
+	.word	.L148,.L149
 	.byte	9
-	.word	.L129,.L122,.L8
+	.word	.L150,.L143,.L9
 	.byte	0,7
-	.word	.L121,.L130,.L13
+	.word	.L142,.L151,.L14
 	.byte	8
-	.word	.L123,.L124
+	.word	.L144,.L145
 	.byte	8
-	.word	.L125,.L126
+	.word	.L146,.L147
 	.byte	8
-	.word	.L127,.L128
+	.word	.L148,.L149
 	.byte	9
-	.word	.L129,.L130,.L13
+	.word	.L150,.L151,.L14
+	.byte	0,7
+	.word	.L142,.L152,.L25
+	.byte	8
+	.word	.L144,.L145
+	.byte	8
+	.word	.L146,.L147
+	.byte	8
+	.word	.L148,.L149
+	.byte	9
+	.word	.L150,.L152,.L25
+	.byte	0,7
+	.word	.L142,.L153,.L30
+	.byte	8
+	.word	.L144,.L145
+	.byte	8
+	.word	.L146,.L147
+	.byte	8
+	.word	.L148,.L149
+	.byte	9
+	.word	.L150,.L153,.L30
 	.byte	0,0,0,0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('task_motor_control')
 	.sect	'.debug_abbrev'
-.L77:
+.L94:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3,8,58
 	.byte	15,59,15,57,15,73,16,2,6,0,0,7,29,1,49,16,17,1,18,1,0,0,8,5,0,49,16,2,6,0,0,9,11,0,49,16,17,1,18,1,0,0
 	.byte	0
 	.sdecl	'.debug_line',debug,cluster('task_motor_control')
 	.sect	'.debug_line'
-.L78:
-	.word	.L199-.L198
-.L198:
+.L95:
+	.word	.L230-.L229
+.L229:
 	.half	3
-	.word	.L201-.L200
-.L200:
+	.word	.L232-.L231
+.L231:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../App/App_Drive.c',0,0,0,0,0
-.L201:
+.L232:
 	.byte	5,13,7,0,5,2
-	.word	.L49
+	.word	.L66
 	.byte	3,30,1,5,44,9
-	.half	.L99-.L49
+	.half	.L116-.L66
 	.byte	3,4,1,5,25,9
-	.half	.L133-.L99
+	.half	.L156-.L116
 	.byte	1,5,34,9
-	.half	.L202-.L133
+	.half	.L233-.L156
 	.byte	3,1,1,5,33,9
-	.half	.L135-.L202
+	.half	.L158-.L233
 	.byte	3,1,1,5,21,9
-	.half	.L136-.L135
+	.half	.L159-.L158
 	.byte	3,2,1,5,22,9
-	.half	.L137-.L136
+	.half	.L160-.L159
 	.byte	3,1,1,5,11,9
-	.half	.L138-.L137
+	.half	.L161-.L160
 	.byte	3,4,1,5,9,9
-	.half	.L5-.L138
+	.half	.L5-.L161
 	.byte	3,2,1,5,43,9
-	.half	.L110-.L5
-	.byte	3,2,1,5,55,9
-	.half	.L140-.L110
+	.half	.L127-.L5
+	.byte	3,2,1,5,24,9
+	.half	.L163-.L127
+	.byte	1,5,55,9
+	.half	.L165-.L163
 	.byte	3,2,1,5,65,9
-	.half	.L203-.L140
+	.half	.L234-.L165
 	.byte	1,5,24,9
-	.half	.L141-.L203
+	.half	.L164-.L234
 	.byte	1,5,47,9
-	.half	.L143-.L141
+	.half	.L168-.L164
 	.byte	3,1,1,5,24,9
-	.half	.L142-.L143
-	.byte	3,2,1,5,25,9
-	.half	.L145-.L142
-	.byte	3,1,1,5,27,9
-	.half	.L146-.L145
-	.byte	3,1,1,5,28,9
-	.half	.L147-.L146
-	.byte	3,1,1,5,9,9
-	.half	.L148-.L147
-	.byte	3,3,1,5,36,7,9
-	.half	.L204-.L148
-	.byte	3,2,1,5,58,9
-	.half	.L149-.L204
-	.byte	1,5,5,9
-	.half	.L122-.L149
-	.byte	3,87,1,5,9,7,9
-	.half	.L205-.L122
-	.byte	3,2,1,5,5,9
-	.half	.L7-.L205
-	.byte	3,2,1,5,9,7,9
-	.half	.L206-.L7
-	.byte	3,2,1,5,5,9
-	.half	.L9-.L206
-	.byte	3,2,1,5,37,9
-	.half	.L8-.L9
-	.byte	3,34,1,5,60,9
-	.half	.L207-.L8
-	.byte	1,5,5,9
-	.half	.L130-.L207
-	.byte	3,86,1,5,9,7,9
-	.half	.L208-.L130
-	.byte	3,2,1,5,5,9
-	.half	.L12-.L208
-	.byte	3,2,1,5,9,7,9
-	.half	.L209-.L12
-	.byte	3,2,1,5,5,9
-	.half	.L14-.L209
-	.byte	3,2,1,5,32,9
-	.half	.L13-.L14
-	.byte	3,35,1,5,29,9
-	.half	.L210-.L13
-	.byte	1,5,42,7,9
-	.half	.L211-.L210
-	.byte	1,5,46,9
-	.half	.L212-.L211
-	.byte	1,5,42,9
-	.half	.L17-.L212
+	.half	.L167-.L168
+	.byte	1,5,57,9
+	.half	.L170-.L167
+	.byte	3,1,1,5,25,9
+	.half	.L169-.L170
+	.byte	1,5,31,9
+	.half	.L166-.L169
+	.byte	3,1,1,5,29,9
+	.half	.L235-.L166
 	.byte	1,5,33,9
-	.half	.L18-.L17
-	.byte	3,1,1,5,30,9
-	.half	.L213-.L18
-	.byte	1,5,44,7,9
-	.half	.L214-.L213
-	.byte	1,5,48,9
-	.half	.L150-.L214
-	.byte	1,5,44,9
-	.half	.L19-.L150
-	.byte	1,5,13,9
-	.half	.L6-.L19
-	.byte	3,3,1,5,41,7,9
-	.half	.L215-.L6
-	.byte	1,5,66,7,9
-	.half	.L216-.L215
-	.byte	1,5,24,7,9
-	.half	.L217-.L216
+	.half	.L236-.L235
+	.byte	3,1,1,5,31,9
+	.half	.L237-.L236
+	.byte	1,5,57,9
+	.half	.L238-.L237
+	.byte	3,1,1,5,71,9
+	.half	.L239-.L238
+	.byte	1,5,24,9
+	.half	.L172-.L239
 	.byte	3,2,1,5,25,9
-	.half	.L218-.L217
-	.byte	3,1,1,5,9,9
-	.half	.L21-.L218
-	.byte	3,3,1,5,25,7,9
-	.half	.L219-.L21
-	.byte	3,2,1,5,13,9
-	.half	.L220-.L219
-	.byte	3,1,1,5,29,7,9
-	.half	.L221-.L220
-	.byte	3,2,1,5,13,9
-	.half	.L25-.L221
-	.byte	3,126,1,5,14,9
-	.half	.L24-.L25
-	.byte	3,5,1,5,25,7,9
-	.half	.L222-.L24
-	.byte	3,2,1,5,13,9
-	.half	.L223-.L222
-	.byte	3,1,1,5,29,7,9
-	.half	.L224-.L223
-	.byte	3,2,1,5,13,9
-	.half	.L28-.L224
-	.byte	3,126,1,5,25,9
-	.half	.L27-.L28
-	.byte	3,7,1,5,9,9
-	.half	.L26-.L27
-	.byte	3,3,1,5,26,7,9
-	.half	.L225-.L26
-	.byte	3,2,1,5,13,9
-	.half	.L226-.L225
-	.byte	3,1,1,5,30,7,9
-	.half	.L227-.L226
-	.byte	3,2,1,5,13,9
-	.half	.L31-.L227
-	.byte	3,126,1,5,14,9
+	.half	.L174-.L172
+	.byte	3,1,1,5,27,9
+	.half	.L175-.L174
+	.byte	3,1,1,5,28,9
+	.half	.L176-.L175
+	.byte	3,1,1,5,13,9
+	.half	.L177-.L176
+	.byte	3,3,1,5,27,7,9
+	.half	.L240-.L177
+	.byte	1,5,33,7,9
+	.half	.L241-.L240
+	.byte	3,2,1,5,58,9
+	.half	.L242-.L241
+	.byte	1,5,5,9
+	.half	.L143-.L242
+	.byte	3,83,1,5,9,7,9
+	.half	.L243-.L143
+	.byte	3,2,1,5,5,9
+	.half	.L8-.L243
+	.byte	3,2,1,5,9,7,9
+	.half	.L244-.L8
+	.byte	3,2,1,5,5,9
+	.half	.L10-.L244
+	.byte	3,2,1,5,34,9
+	.half	.L9-.L10
+	.byte	3,38,1,5,59,9
+	.half	.L245-.L9
+	.byte	1,5,5,9
+	.half	.L151-.L245
+	.byte	3,82,1,5,9,7,9
+	.half	.L246-.L151
+	.byte	3,2,1,5,5,9
+	.half	.L13-.L246
+	.byte	3,2,1,5,9,7,9
+	.half	.L247-.L13
+	.byte	3,2,1,5,5,9
+	.half	.L15-.L247
+	.byte	3,2,1,5,29,9
+	.half	.L14-.L15
+	.byte	3,39,1,5,41,9
+	.half	.L248-.L14
+	.byte	1,5,45,9
+	.half	.L249-.L248
+	.byte	1,5,41,9
+	.half	.L18-.L249
+	.byte	1,5,30,9
+	.half	.L19-.L18
+	.byte	3,1,1,5,42,9
+	.half	.L250-.L19
+	.byte	1,5,46,9
+	.half	.L179-.L250
+	.byte	1,5,42,9
+	.half	.L20-.L179
+	.byte	1,5,49,9
+	.half	.L21-.L20
+	.byte	1,5,14,9
+	.half	.L6-.L21
+	.byte	3,2,1,5,36,7,9
+	.half	.L251-.L6
+	.byte	3,2,1,5,58,9
+	.half	.L180-.L251
+	.byte	1,5,5,9
+	.half	.L152-.L180
+	.byte	3,76,1,5,9,7,9
+	.half	.L252-.L152
+	.byte	3,2,1,5,5,9
+	.half	.L24-.L252
+	.byte	3,2,1,5,9,7,9
+	.half	.L253-.L24
+	.byte	3,2,1,5,5,9
+	.half	.L26-.L253
+	.byte	3,2,1,5,37,9
+	.half	.L25-.L26
+	.byte	3,45,1,5,60,9
+	.half	.L254-.L25
+	.byte	1,5,5,9
+	.half	.L153-.L254
+	.byte	3,75,1,5,9,7,9
+	.half	.L255-.L153
+	.byte	3,2,1,5,5,9
+	.half	.L29-.L255
+	.byte	3,2,1,5,9,7,9
+	.half	.L256-.L29
+	.byte	3,2,1,5,5,9
+	.half	.L31-.L256
+	.byte	3,2,1,5,32,9
 	.half	.L30-.L31
-	.byte	3,5,1,5,26,7,9
-	.half	.L228-.L30
-	.byte	3,2,1,5,13,9
-	.half	.L229-.L228
-	.byte	3,1,1,5,30,7,9
-	.half	.L230-.L229
-	.byte	3,2,1,5,13,9
-	.half	.L34-.L230
-	.byte	3,126,1,5,26,9
-	.half	.L33-.L34
-	.byte	3,7,1,5,9,9
-	.half	.L32-.L33
-	.byte	3,6,1,5,26,7,9
-	.half	.L231-.L32
-	.byte	3,2,1,5,28,9
-	.half	.L144-.L231
-	.byte	1,5,43,9
-	.half	.L36-.L144
-	.byte	3,4,1,5,9,9
-	.half	.L37-.L36
-	.byte	3,3,1,5,26,7,9
-	.half	.L232-.L37
-	.byte	3,2,1,5,28,9
-	.half	.L233-.L232
+	.byte	3,46,1,5,29,9
+	.half	.L257-.L30
+	.byte	1,5,42,7,9
+	.half	.L258-.L257
+	.byte	1,5,46,9
+	.half	.L259-.L258
+	.byte	1,5,42,9
+	.half	.L34-.L259
+	.byte	1,5,33,9
+	.half	.L35-.L34
+	.byte	3,1,1,5,30,9
+	.half	.L260-.L35
+	.byte	1,5,44,7,9
+	.half	.L261-.L260
+	.byte	1,5,48,9
+	.half	.L181-.L261
 	.byte	1,5,44,9
-	.half	.L38-.L233
+	.half	.L36-.L181
+	.byte	1,5,13,9
+	.half	.L22-.L36
+	.byte	3,3,1,5,41,7,9
+	.half	.L262-.L22
+	.byte	1,5,66,7,9
+	.half	.L263-.L262
+	.byte	1,5,24,7,9
+	.half	.L264-.L263
+	.byte	3,2,1,5,25,9
+	.half	.L265-.L264
+	.byte	3,1,1,5,9,9
+	.half	.L38-.L265
+	.byte	3,3,1,5,25,7,9
+	.half	.L266-.L38
+	.byte	3,2,1,5,13,9
+	.half	.L267-.L266
+	.byte	3,1,1,5,29,7,9
+	.half	.L268-.L267
+	.byte	3,2,1,5,13,9
+	.half	.L42-.L268
+	.byte	3,126,1,5,14,9
+	.half	.L41-.L42
+	.byte	3,5,1,5,25,7,9
+	.half	.L269-.L41
+	.byte	3,2,1,5,13,9
+	.half	.L270-.L269
+	.byte	3,1,1,5,29,7,9
+	.half	.L271-.L270
+	.byte	3,2,1,5,13,9
+	.half	.L45-.L271
+	.byte	3,126,1,5,25,9
+	.half	.L44-.L45
+	.byte	3,7,1,5,9,9
+	.half	.L43-.L44
+	.byte	3,3,1,5,26,7,9
+	.half	.L272-.L43
+	.byte	3,2,1,5,13,9
+	.half	.L273-.L272
+	.byte	3,1,1,5,30,7,9
+	.half	.L274-.L273
+	.byte	3,2,1,5,13,9
+	.half	.L48-.L274
+	.byte	3,126,1,5,14,9
+	.half	.L47-.L48
+	.byte	3,5,1,5,26,7,9
+	.half	.L275-.L47
+	.byte	3,2,1,5,13,9
+	.half	.L276-.L275
+	.byte	3,1,1,5,30,7,9
+	.half	.L277-.L276
+	.byte	3,2,1,5,13,9
+	.half	.L51-.L277
+	.byte	3,126,1,5,26,9
+	.half	.L50-.L51
+	.byte	3,7,1,5,9,9
+	.half	.L49-.L50
+	.byte	3,6,1,5,26,7,9
+	.half	.L278-.L49
+	.byte	3,2,1,5,28,9
+	.half	.L173-.L278
+	.byte	1,5,43,9
+	.half	.L53-.L173
+	.byte	3,4,1,5,9,9
+	.half	.L54-.L53
+	.byte	3,3,1,5,26,7,9
+	.half	.L279-.L54
+	.byte	3,2,1,5,28,9
+	.half	.L280-.L279
+	.byte	1,5,44,9
+	.half	.L55-.L280
 	.byte	3,4,1,5,11,9
-	.half	.L3-.L38
-	.byte	3,167,127,1,5,1,9
-	.half	.L134-.L3
-	.byte	3,220,0,1,7,9
-	.half	.L80-.L134
+	.half	.L3-.L55
+	.byte	3,156,127,1,5,1,9
+	.half	.L157-.L3
+	.byte	3,231,0,1,7,9
+	.half	.L97-.L157
 	.byte	0,1,1
-.L199:
+.L230:
 	.sdecl	'.debug_ranges',debug,cluster('task_motor_control')
 	.sect	'.debug_ranges'
-.L79:
-	.word	-1,.L49,0,.L80-.L49,0,0
+.L96:
+	.word	-1,.L66,0,.L97-.L66,0,0
 	.sdecl	'.debug_info',debug,cluster('g_driveTaskHandle')
 	.sect	'.debug_info'
-.L81:
+.L98:
 	.word	232
 	.half	3
-	.word	.L82
+	.word	.L99
 	.byte	4,1
 	.byte	'../App/App_Drive.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\USER\\Documents\\project2\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
 	.byte	1,2
-	.word	.L52
+	.word	.L69
 	.byte	3
 	.byte	'g_driveTaskHandle',0,1,16,21
-	.word	.L131
+	.word	.L154
 	.byte	5,3
 	.word	g_driveTaskHandle
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('g_driveTaskHandle')
 	.sect	'.debug_abbrev'
-.L82:
+.L99:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
 	.sdecl	'.debug_loc',debug,cluster('AppDrive_Init')
 	.sect	'.debug_loc'
-.L50:
-	.word	-1,.L51,0,.L83-.L51
+.L67:
+	.word	-1,.L68,0,.L100-.L68
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L86:
+.L103:
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('task_motor_control')
 	.sect	'.debug_loc'
-.L116:
-	.word	-1,.L49,.L142-.L49,.L144-.L49
+.L133:
+	.word	-1,.L66,.L167-.L66,.L169-.L66
 	.half	1
 	.byte	82
-	.word	.L36-.L49,.L37-.L49
+	.word	.L170-.L66,.L3-.L66
 	.half	1
-	.byte	82
+	.byte	94
 	.word	0,0
-.L98:
-	.word	-1,.L49,0,.L133-.L49
+.L115:
+	.word	-1,.L66,0,.L156-.L66
 	.half	1
 	.byte	100
 	.word	0,0
-.L113:
-	.word	-1,.L49,0,.L134-.L49
+.L130:
+	.word	-1,.L66,0,.L157-.L66
 	.half	2
 	.byte	145,100
 	.word	0,0
-.L106:
-	.word	-1,.L49,.L137-.L49,.L134-.L49
+.L123:
+	.word	-1,.L66,.L160-.L66,.L157-.L66
 	.half	1
 	.byte	91
-	.word	.L151-.L49,.L37-.L49
+	.word	.L182-.L66,.L54-.L66
 	.half	1
 	.byte	84
 	.word	0,0
-.L108:
+.L125:
 	.word	0,0
-.L107:
-	.word	-1,.L49,.L138-.L49,.L134-.L49
+.L124:
+	.word	-1,.L66,.L161-.L66,.L157-.L66
 	.half	1
 	.byte	92
 	.word	0,0
-.L109:
+.L126:
 	.word	0,0
-.L115:
-	.word	-1,.L49,.L141-.L49,.L142-.L49
+.L134:
+	.word	-1,.L66,.L169-.L66,.L172-.L66
 	.half	1
 	.byte	82
-	.word	.L143-.L49,.L3-.L49
+	.word	.L166-.L66,.L3-.L66
 	.half	1
 	.byte	88
 	.word	0,0
-.L128:
+.L132:
+	.word	-1,.L66,.L164-.L66,.L167-.L66
+	.half	1
+	.byte	82
+	.word	.L168-.L66,.L3-.L66
+	.half	1
+	.byte	93
 	.word	0,0
-.L100:
-	.word	-1,.L49,0,.L134-.L49
-	.half	2
-	.byte	145,96
-	.word	0,0
-.L126:
-	.word	0,0
-.L111:
-	.word	-1,.L49,.L140-.L49,.L141-.L49
+.L137:
+	.word	-1,.L66,.L172-.L66,.L173-.L66
+	.half	1
+	.byte	82
+	.word	.L53-.L66,.L54-.L66
 	.half	1
 	.byte	82
 	.word	0,0
-.L102:
-	.word	-1,.L49,.L135-.L49,.L134-.L49
+.L149:
+	.word	0,0
+.L117:
+	.word	-1,.L66,0,.L157-.L66
+	.half	2
+	.byte	145,96
+	.word	0,0
+.L147:
+	.word	0,0
+.L128:
+	.word	-1,.L66,.L163-.L66,.L164-.L66
 	.half	1
-	.byte	89
-	.word	.L139-.L49,.L110-.L49
+	.byte	82
+	.word	.L165-.L66,.L166-.L66
+	.half	1
+	.byte	88
+	.word	.L171-.L66,.L169-.L66
 	.half	1
 	.byte	84
 	.word	0,0
-.L104:
-	.word	-1,.L49,.L136-.L49,.L134-.L49
+.L135:
+	.word	-1,.L66,0,.L157-.L66
+	.half	2
+	.byte	145,124
+	.word	0,0
+.L136:
+	.word	-1,.L66,0,.L157-.L66
+	.half	2
+	.byte	145,125
+	.word	0,0
+.L119:
+	.word	-1,.L66,.L158-.L66,.L157-.L66
+	.half	1
+	.byte	89
+	.word	.L162-.L66,.L127-.L66
+	.half	1
+	.byte	84
+	.word	0,0
+.L121:
+	.word	-1,.L66,.L159-.L66,.L157-.L66
 	.half	1
 	.byte	90
 	.word	0,0
-.L117:
-	.word	-1,.L49,.L145-.L49,.L144-.L49
-	.half	5
-	.byte	144,32,157,32,0
-	.word	.L36-.L49,.L37-.L49
-	.half	5
-	.byte	144,32,157,32,0
-	.word	0,0
-.L119:
-	.word	-1,.L49,.L147-.L49,.L144-.L49
-	.half	1
-	.byte	85
-	.word	.L36-.L49,.L37-.L49
-	.half	1
-	.byte	85
-	.word	0,0
-.L118:
-	.word	-1,.L49,.L146-.L49,.L144-.L49
+.L138:
+	.word	-1,.L66,.L174-.L66,.L173-.L66
 	.half	1
 	.byte	81
-	.word	.L36-.L49,.L37-.L49
+	.word	.L53-.L66,.L54-.L66
 	.half	1
 	.byte	81
 	.word	0,0
-.L120:
-	.word	-1,.L49,.L148-.L49,.L149-.L49
+.L140:
+	.word	-1,.L66,.L176-.L66,.L173-.L66
+	.half	1
+	.byte	85
+	.word	.L53-.L66,.L54-.L66
+	.half	1
+	.byte	85
+	.word	0,0
+.L139:
+	.word	-1,.L66,.L175-.L66,.L173-.L66
+	.half	1
+	.byte	83
+	.word	.L53-.L66,.L54-.L66
+	.half	1
+	.byte	83
+	.word	0,0
+.L141:
+	.word	-1,.L66,.L177-.L66,.L178-.L66
 	.half	1
 	.byte	95
-	.word	.L150-.L49,.L19-.L49
+	.word	.L179-.L66,.L20-.L66
 	.half	1
 	.byte	95
-	.word	.L6-.L49,.L3-.L49
+	.word	.L21-.L66,.L180-.L66
+	.half	1
+	.byte	95
+	.word	.L181-.L66,.L36-.L66
+	.half	1
+	.byte	95
+	.word	.L22-.L66,.L3-.L66
 	.half	1
 	.byte	95
 	.word	0,0
-.L48:
-	.word	-1,.L49,0,.L99-.L49
+.L65:
+	.word	-1,.L66,0,.L116-.L66
 	.half	2
 	.byte	138,0
-	.word	.L99-.L49,.L96-.L49
+	.word	.L116-.L66,.L113-.L66
 	.half	2
 	.byte	138,32
 	.word	0,0
-.L124:
+.L145:
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('vPortSetCCPN')
 	.sect	'.debug_loc'
-.L89:
-	.word	-1,.L43,0,.L87-.L43
+.L106:
+	.word	-1,.L60,0,.L104-.L60
 	.half	1
 	.byte	84
 	.word	0,0
-.L42:
-	.word	-1,.L43,0,.L87-.L43
+.L59:
+	.word	-1,.L60,0,.L104-.L60
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('vPortSetICR')
 	.sect	'.debug_loc'
-.L91:
-	.word	-1,.L45,0,.L90-.L45
+.L108:
+	.word	-1,.L62,0,.L107-.L62
 	.half	1
 	.byte	84
 	.word	0,0
-.L44:
-	.word	-1,.L45,0,.L90-.L45
+.L61:
+	.word	-1,.L62,0,.L107-.L62
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('xPortSetCCPN')
 	.sect	'.debug_loc'
-.L93:
-	.word	-1,.L47,0,.L92-.L47
+.L110:
+	.word	-1,.L64,0,.L109-.L64
 	.half	1
 	.byte	84
 	.word	0,0
-.L95:
-	.word	-1,.L47,.L132-.L47,.L92-.L47
+.L112:
+	.word	-1,.L64,.L155-.L64,.L109-.L64
 	.half	1
 	.byte	82
 	.word	0,0
-.L46:
-	.word	-1,.L47,0,.L92-.L47
+.L63:
+	.word	-1,.L64,0,.L109-.L64
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_frame',debug
 	.sect	'.debug_frame'
-.L234:
+.L281:
 	.word	48
 	.word	-1
 	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
@@ -1578,27 +1825,27 @@ g_driveTaskHandle:	.type	object
 	.sdecl	'.debug_frame',debug,cluster('vPortSetCCPN')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L234,.L43,.L87-.L43
+	.word	.L281,.L60,.L104-.L60
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('vPortSetICR')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L234,.L45,.L90-.L45
+	.word	.L281,.L62,.L107-.L62
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('xPortSetCCPN')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L234,.L47,.L92-.L47
+	.word	.L281,.L64,.L109-.L64
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('task_motor_control')
 	.sect	'.debug_frame'
 	.word	28
-	.word	.L234,.L49,.L96-.L49
+	.word	.L281,.L66,.L113-.L66
 	.byte	4
-	.word	(.L99-.L49)/2
+	.word	(.L116-.L66)/2
 	.byte	19,32,22,26,3,19,138,32,0,0,0
 	.sdecl	'.debug_frame',debug,cluster('AppDrive_Init')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L234,.L51,.L83-.L51
+	.word	.L281,.L68,.L100-.L68
 	; Module end

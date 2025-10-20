@@ -9,6 +9,11 @@
 static DriveCommand g_latestCommand;
 static TofSample g_latestTof;
 static bool g_aebActive;
+static bool g_diagSessionActive;
+static TickType_t g_diagExpireTick;
+static bool g_motorOverrideActive;
+static uint8_t g_motorOverrideDir;
+static uint8_t g_motorOverrideSpeed;
 
 static inline int clampi(int value, int lo, int hi)
 {
@@ -38,6 +43,11 @@ void AppShared_Init(void)
     g_latestTof.timestamp = 0;
 
     g_aebActive = false;
+    g_diagSessionActive = false;
+    g_diagExpireTick = 0;
+    g_motorOverrideActive = false;
+    g_motorOverrideDir = 0;
+    g_motorOverrideSpeed = 0;
     taskEXIT_CRITICAL();
 }
 
@@ -179,4 +189,77 @@ void AppShared_SetAebActiveFromIsr(bool active)
     UBaseType_t mask = taskENTER_CRITICAL_FROM_ISR();
     g_aebActive = active;
     taskEXIT_CRITICAL_FROM_ISR(mask);
+}
+
+void AppShared_SetDiagSession(bool active, TickType_t expire_tick)
+{
+    taskENTER_CRITICAL();
+    g_diagSessionActive = active;
+    g_diagExpireTick = expire_tick;
+    if (!active)
+    {
+        g_motorOverrideActive = false;
+        g_motorOverrideDir = 0;
+        g_motorOverrideSpeed = 0;
+    }
+    taskEXIT_CRITICAL();
+}
+
+bool AppShared_IsDiagSessionActive(TickType_t now)
+{
+    bool active;
+    TickType_t expire;
+
+    taskENTER_CRITICAL();
+    active = g_diagSessionActive;
+    expire = g_diagExpireTick;
+    if (active && (now >= expire))
+    {
+        g_diagSessionActive = false;
+        g_motorOverrideActive = false;
+        g_motorOverrideDir = 0;
+        g_motorOverrideSpeed = 0;
+        active = false;
+    }
+    taskEXIT_CRITICAL();
+    return active;
+}
+
+void AppShared_SetMotorOverride(uint8_t dir, uint8_t speed)
+{
+    taskENTER_CRITICAL();
+    g_motorOverrideActive = true;
+    g_motorOverrideDir = dir ? 1U : 0U;
+    g_motorOverrideSpeed = (speed > 100U) ? 100U : speed;
+    taskEXIT_CRITICAL();
+}
+
+void AppShared_ClearMotorOverride(void)
+{
+    taskENTER_CRITICAL();
+    g_motorOverrideActive = false;
+    g_motorOverrideDir = 0U;
+    g_motorOverrideSpeed = 0U;
+    taskEXIT_CRITICAL();
+}
+
+bool AppShared_GetMotorOverride(uint8_t *dir, uint8_t *speed)
+{
+    bool active;
+
+    taskENTER_CRITICAL();
+    active = g_motorOverrideActive;
+    if (active)
+    {
+        if (dir != NULL)
+        {
+            *dir = g_motorOverrideDir;
+        }
+        if (speed != NULL)
+        {
+            *speed = g_motorOverrideSpeed;
+        }
+    }
+    taskEXIT_CRITICAL();
+    return active;
 }

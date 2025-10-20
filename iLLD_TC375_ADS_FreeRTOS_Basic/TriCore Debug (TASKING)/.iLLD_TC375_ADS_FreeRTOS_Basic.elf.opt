@@ -242,6 +242,7 @@
 "BSW/Driver/stm.o"
 "App/App_AEB.o"
 "App/App_Comm.o"
+"App/App_DoIP.o"
 "App/App_Drive.o"
 "App/App_RCar.o"
 "App/App_Shared.o"
