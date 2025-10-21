@@ -1,0 +1,13 @@
+[Unit]
+Description=HTTP OTA Receiver (upload & swap)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=/opt/traffic-app
+ExecStart=/opt/traffic-app/venv/bin/python /opt/traffic-app/http_ota_server.py
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,17 @@
+[Unit]
+Description=Traffic Light App (FOTA)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=/opt/traffic-app/current
+Environment=PIN_RED=17
+Environment=PIN_YEL=27
+Environment=PIN_GRN=22
+ExecStart=/opt/traffic-app/venv/bin/python /opt/traffic-app/current/app.py
+Restart=always
+RestartSec=2
+TimeoutStartSec=30
+
+[Install]
+WantedBy=multi-user.target
