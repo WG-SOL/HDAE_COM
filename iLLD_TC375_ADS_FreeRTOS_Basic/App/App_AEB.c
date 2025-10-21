@@ -10,8 +10,8 @@
 #include <stdint.h>
 #include <string.h>
 
-#define AEB_STOP_THRESHOLD_CM    (30.0f)
-#define AEB_CLEAR_THRESHOLD_CM   (40.0f)
+static float s_aebStopThresholdCm = 30.0f;
+static float s_aebClearThresholdCm = 40.0f;
 #define AEB_TASK_STACK_WORDS     (configMINIMAL_STACK_SIZE + 128U)
 #define AEB_TASK_PRIORITY        (7U)
 #define AEB_QUEUE_LENGTH         (1U)
@@ -27,6 +27,38 @@ typedef struct
 static QueueHandle_t g_tofQueue = NULL;
 static TaskHandle_t g_aebTaskHandle = NULL;
 static bool g_aebActiveState = false;
+static float clamp_threshold(float value)
+{
+    if (value < 1.0f)
+    {
+        return 1.0f;
+    }
+    if (value > 500.0f)
+    {
+        return 500.0f;
+    }
+    return value;
+}
+
+void AppAEB_SetThresholds(float stop_cm)
+{
+    float stop = clamp_threshold(stop_cm);
+    float clear = clamp_threshold(stop_cm + 10.0f);
+    taskENTER_CRITICAL();
+    s_aebStopThresholdCm = stop;
+    s_aebClearThresholdCm = clear;
+    taskEXIT_CRITICAL();
+    my_printf("AEB thresholds updated: stop=%.1f clear=%.1f\n", (double)stop, (double)clear);
+}
+
+float AppAEB_GetStopThreshold(void)
+{
+    float value;
+    taskENTER_CRITICAL();
+    value = s_aebStopThresholdCm;
+    taskEXIT_CRITICAL();
+    return value;
+}
 
 static void AppAEB_ProcessTofFrame(const TofFrameMessage *frame);
 static void task_aeb_handler(void *arg);
@@ -132,24 +164,34 @@ static void AppAEB_ProcessTofFrame(const TofFrameMessage *frame)
     }
 
     float distance_cm = ((float)raw_distance) / 10.0f;
-    // my_printf("AEB ToF distance: %.1f cm (strength=%u)\n",
-    //           (double)distance_cm,
-    //           (unsigned int)strength);
+    bool diagActive = AppShared_IsDiagSessionActive(xTaskGetTickCount());
 
-    bool newState = g_aebActiveState;
-    if (!g_aebActiveState && (distance_cm <= AEB_STOP_THRESHOLD_CM))
+    if (diagActive)
     {
-        newState = true;
+        if (g_aebActiveState)
+        {
+            g_aebActiveState = false;
+            AppShared_SetAebActive(false);
+            my_printf("AEB suppressed (diagnostic session)\n");
+        }
     }
-    else if (g_aebActiveState && (distance_cm >= AEB_CLEAR_THRESHOLD_CM))
+    else
     {
-        newState = false;
-    }
+        bool newState = g_aebActiveState;
+        if (!g_aebActiveState && (distance_cm <= s_aebStopThresholdCm))
+        {
+            newState = true;
+        }
+        else if (g_aebActiveState && (distance_cm >= s_aebClearThresholdCm))
+        {
+            newState = false;
+        }
 
-    if (newState != g_aebActiveState)
-    {
-        g_aebActiveState = newState;
-        AppShared_SetAebActive(newState);
+        if (newState != g_aebActiveState)
+        {
+            g_aebActiveState = newState;
+            AppShared_SetAebActive(newState);
+        }
     }
 
     TofSample sample;

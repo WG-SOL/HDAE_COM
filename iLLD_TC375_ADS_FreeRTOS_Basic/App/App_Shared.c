@@ -195,7 +195,7 @@ void AppShared_SetDiagSession(bool active, TickType_t expire_tick)
 {
     taskENTER_CRITICAL();
     g_diagSessionActive = active;
-    g_diagExpireTick = expire_tick;
+    g_diagExpireTick = active ? expire_tick : 0;
     if (!active)
     {
         g_motorOverrideActive = false;
@@ -207,20 +207,11 @@ void AppShared_SetDiagSession(bool active, TickType_t expire_tick)
 
 bool AppShared_IsDiagSessionActive(TickType_t now)
 {
+    (void)now;
     bool active;
-    TickType_t expire;
 
     taskENTER_CRITICAL();
     active = g_diagSessionActive;
-    expire = g_diagExpireTick;
-    if (active && (now >= expire))
-    {
-        g_diagSessionActive = false;
-        g_motorOverrideActive = false;
-        g_motorOverrideDir = 0;
-        g_motorOverrideSpeed = 0;
-        active = false;
-    }
     taskEXIT_CRITICAL();
     return active;
 }

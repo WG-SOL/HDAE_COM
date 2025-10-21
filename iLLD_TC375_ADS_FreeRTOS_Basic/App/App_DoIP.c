@@ -1,6 +1,7 @@
 #include "App_DoIP.h"
 
 #include "App_Shared.h"
+#include "App_AEB.h"
 #include "my_stdio.h"
 #include "FreeRTOS.h"
 #include "task.h"
@@ -31,6 +32,7 @@
 #define DOIP_ROUTING_ACK_SUCCESS             (0x10U)
 #define DOIP_UDS_SID_READ_DATA_BY_ID         (0x22U)
 #define DOIP_UDS_SID_IO_CONTROL_BY_ID        (0x2FU)
+#define DOIP_UDS_SID_WRITE_DATA_BY_ID        (0x2EU)
 #define DOIP_UDS_SID_DIAGNOSTIC_SESSION    (0x10U)
 #define DOIP_UDS_SID_POSITIVE_OFFSET         (0x40U)
 
@@ -38,6 +40,7 @@
 #define DOIP_DID_LEGACY_TOF                  (0x0003U)
 #define DOIP_DID_LIGHT                       (0x1002U)
 #define DOIP_DID_MOTOR_CONTROL               (0x4000U)
+#define DOIP_DID_AEB_STOP_THRESHOLD           (0x2001U)
 
 #define UDS_NRC_SERVICE_NOT_SUPPORTED        (0x11U)
 #define UDS_NRC_SUBFUNCTION_NOT_SUPPORTED    (0x12U)
@@ -79,6 +82,7 @@ static void  doip_close(struct tcp_pcb *tpcb, DoipConnState *state);
 static struct pbuf *doip_build_response(const struct pbuf *request, uint16_t *out_payloadType);
 static struct pbuf *doip_make_diag_response(uint16_t client_sa, const uint8_t *uds_payload, uint8_t uds_len);
 static struct pbuf *doip_handle_sid_dsc(uint16_t client_sa, const uint8_t *diag, uint32_t diag_len);
+static struct pbuf *doip_handle_sid_wdbi(uint16_t client_sa, const uint8_t *diag, uint32_t diag_len);
 static struct pbuf *doip_handle_sid_rdbi(uint16_t client_sa, const uint8_t *diag, uint32_t diag_len);
 static struct pbuf *doip_handle_sid_iocbi(uint16_t client_sa, const uint8_t *diag, uint32_t diag_len);
 static struct pbuf *doip_make_pos_rdbi(uint16_t client_sa, uint16_t did, const uint8_t *value, uint8_t value_len);
@@ -481,12 +485,18 @@ static struct pbuf *doip_build_response(const struct pbuf *request, uint16_t *ou
                 my_printf("DoIP RX: SID=0x%02X SUB=0x%02X\n", (unsigned)sid, (unsigned)diag[1]);
             }
             /* 한줄 로그: 진단 요청 수신 (SID/DID) */
+            if ((sid == DOIP_UDS_SID_WRITE_DATA_BY_ID) && (diag_len >= 3U))
+            {
+                did_log = ((uint16_t)diag[1] << 8) | diag[2];
+            }
             my_printf("DoIP RX: SID=0x%02X DID=0x%04X\n", (unsigned)sid, (unsigned)did_log);
 
             switch (sid)
             {
                 case DOIP_UDS_SID_DIAGNOSTIC_SESSION:
                     return doip_handle_sid_dsc(client_sa, diag, diag_len);
+                case DOIP_UDS_SID_WRITE_DATA_BY_ID:
+                    return doip_handle_sid_wdbi(client_sa, diag, diag_len);
                 case DOIP_UDS_SID_READ_DATA_BY_ID:
                     return doip_handle_sid_rdbi(client_sa, diag, diag_len);
                 case DOIP_UDS_SID_IO_CONTROL_BY_ID:
@@ -550,10 +560,9 @@ static struct pbuf *doip_handle_sid_dsc(uint16_t client_sa, const uint8_t *diag,
     {
         case 0x03U: /* 진단 세션 진입 */
         {
-            TickType_t now = xTaskGetTickCount();
-            TickType_t expire = now + pdMS_TO_TICKS(DOIP_DIAG_SESSION_TIMEOUT_MS);
-            AppShared_SetDiagSession(true, expire);
+            AppShared_SetDiagSession(true, 0);
             AppShared_ClearMotorOverride();
+            my_printf("DoIP: diagnostic session entered\n");
             uint8_t payload[2] = { (uint8_t)(DOIP_UDS_SID_DIAGNOSTIC_SESSION + DOIP_UDS_SID_POSITIVE_OFFSET), subFunction };
             return doip_make_diag_response(client_sa, payload, (uint8_t)sizeof(payload));
         }
@@ -562,6 +571,7 @@ static struct pbuf *doip_handle_sid_dsc(uint16_t client_sa, const uint8_t *diag,
         {
             AppShared_SetDiagSession(false, 0);
             AppShared_ClearMotorOverride();
+            my_printf("DoIP: diagnostic session exited\n");
             uint8_t payload[2] = { (uint8_t)(DOIP_UDS_SID_DIAGNOSTIC_SESSION + DOIP_UDS_SID_POSITIVE_OFFSET), subFunction };
             return doip_make_diag_response(client_sa, payload, (uint8_t)sizeof(payload));
         }
@@ -632,6 +642,45 @@ static struct pbuf *doip_handle_sid_rdbi(uint16_t client_sa, const uint8_t *diag
     return doip_make_pos_rdbi(client_sa, did, value, value_len);
 }
 
+static struct pbuf *doip_handle_sid_wdbi(uint16_t client_sa, const uint8_t *diag, uint32_t diag_len)
+{
+    if (diag_len < 5U)
+    {
+        return doip_make_nrc(client_sa, DOIP_UDS_SID_WRITE_DATA_BY_ID, UDS_NRC_INCORRECT_MESSAGE_LENGTH);
+    }
+
+    TickType_t now = xTaskGetTickCount();
+    if (!AppShared_IsDiagSessionActive(now))
+    {
+        return doip_make_nrc(client_sa, DOIP_UDS_SID_WRITE_DATA_BY_ID, UDS_NRC_SUBFUNCTION_NOT_ACTIVE);
+    }
+
+    uint16_t did = ((uint16_t)diag[1] << 8) | diag[2];
+
+    switch (did)
+    {
+        case DOIP_DID_AEB_STOP_THRESHOLD:
+        {
+            uint16_t raw = ((uint16_t)diag[3] << 8) | diag[4];
+            if (raw < 1U || raw > 500U)
+            {
+                return doip_make_nrc(client_sa, DOIP_UDS_SID_WRITE_DATA_BY_ID, UDS_NRC_REQUEST_OUT_OF_RANGE);
+            }
+            AppAEB_SetThresholds((float)raw);
+            uint8_t payload[3] =
+            {
+                (uint8_t)(DOIP_UDS_SID_WRITE_DATA_BY_ID + DOIP_UDS_SID_POSITIVE_OFFSET),
+                (uint8_t)(did >> 8),
+                (uint8_t)(did & 0xFF)
+            };
+            return doip_make_diag_response(client_sa, payload, (uint8_t)sizeof(payload));
+        }
+
+        default:
+            return doip_make_nrc(client_sa, DOIP_UDS_SID_WRITE_DATA_BY_ID, UDS_NRC_REQUEST_OUT_OF_RANGE);
+    }
+}
+
 static struct pbuf *doip_handle_sid_iocbi(uint16_t client_sa, const uint8_t *diag, uint32_t diag_len)
 {
     if (diag_len < 4U)
@@ -696,14 +745,29 @@ static bool doip_fill_rdbi_payload(uint16_t did, uint8_t *out_buf, uint8_t *out_
 
     switch (did)
     {
-        case DOIP_DID_LIGHT:
-        case 0x0001U: /* legacy */
+        case DOIP_DID_AEB_STOP_THRESHOLD:
+        {
+            float stop = AppAEB_GetStopThreshold();
+            if (stop < 0.0f)
+            {
+                stop = 0.0f;
+            }
+            if (stop > 65535.0f)
+            {
+                stop = 65535.0f;
+            }
+            value = (uint16_t)stop;
+            break;
+        }
+        /* EVADC 관련 DID는 DoIP 경로에서는 동작하지 않도록 비활성화 */
+        /* case DOIP_DID_LIGHT:
+        case 0x0001U:  legacy
             value = (uint16_t)Evadc_readVR();
             break;
 
         case 0x0002U:
             value = (uint16_t)Evadc_readPR();
-            break;
+            break; */
 
         case DOIP_DID_TOF:
         case DOIP_DID_LEGACY_TOF:

@@ -75,7 +75,7 @@ static void task_motor_control(void *arg)
             targetRightDir = cmd.right_dir ? 1 : 0;
         }
         //AEB가 활성화되어있고 전진상태라면 정지
-        if (aebActive && (targetLeftDir == 1) && (targetRightDir == 1))
+        if (!diagActive && aebActive && (targetLeftDir == 1) && (targetRightDir == 1))
         {
             targetLeft = 0;
             targetRight = 0;
