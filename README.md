@@ -81,7 +81,14 @@
 
 ### Diagnostics
 
-
+<img width="837" height="431" alt="Image" src="https://github.com/user-attachments/assets/8b5d820f-624b-439f-98c9-4bae5b5a8e5d" />
+<img width="831" height="447" alt="Image" src="https://github.com/user-attachments/assets/2f3c8c67-be0e-43fa-be02-6ad868f04247" />
+<img width="846" height="446" alt="Image" src="https://github.com/user-attachments/assets/570507a9-0a76-4751-8ed5-cb58f1e6027a" />
+<img width="767" height="432" alt="Image" src="https://github.com/user-attachments/assets/9be7033d-0a94-4e26-b8c1-9e456317f768" />
+<img width="683" height="446" alt="Image" src="https://github.com/user-attachments/assets/bc926ca7-7203-446f-858e-1e39d85c2013" />
+<img width="702" height="435" alt="Image" src="https://github.com/user-attachments/assets/8044411c-10e4-4ec4-b0d5-0a76d60acb81" />
+<img width="681" height="435" alt="Image" src="https://github.com/user-attachments/assets/fc5bac96-177a-4949-ac20-20e87a837313" />
+<img width="511" height="435" alt="Image" src="https://github.com/user-attachments/assets/b6b8f3fa-2977-485b-95da-f571bba6d654" />
 
 ### CAN DBC
 
