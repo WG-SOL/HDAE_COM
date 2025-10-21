@@ -51,6 +51,13 @@
 
 5. RTOS를 통한 실시간 제어 및 태스크, 자원 관리
 
+## Architecture
+
+<img width="687" height="334" alt="image" src="https://github.com/user-attachments/assets/0ac4349c-70eb-47a2-a633-847e904e6932" />
+<img width="909" height="282" alt="image" src="https://github.com/user-attachments/assets/8702eda1-40b0-4da4-bb35-081e4fa26bae" />
+
+<br>
+
 
 
 ## 🤙🏻 commit 컨벤션
