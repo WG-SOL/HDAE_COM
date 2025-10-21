@@ -10,7 +10,6 @@
     <td align="center">3</td>
     <td align="center">4</td>
     <td align="center">5</td>
-    <td align="center">6</td>
   </tr>
      <tr>
     <td align="center"><a href="https://github.com/"><sub><b>기동언</b></td>
