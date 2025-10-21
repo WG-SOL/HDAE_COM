@@ -43,11 +43,13 @@
 ## ✔️ 주요 기능
 
 1. Mobile App과 RPI(HPC) 사이 BLE를 연결 후 원격조작 및 램프 스위치 기능
-2. SDV 전환에 맞춰 중앙 집중화.
-2-1. RPI가 SOME/IP를 통해 각각의 Domain ECU에 Request/Response를 받아 HW Service 제어 서비스를 RPC로 수행
-3. DoIP, DTC 등 진단
-3-1. PC에서 GUI로 진단기를 통해 진단
+
+2. SDV 전환에 맞춰 중앙 집중화. RPI가 SOME/IP를 통해 각각의 Domain ECU에 Request/Response를 받아 HW Service 제어 서비스를 RPC로 수행
+
+3. DoIP, DTC 등 진단. PC에서 GUI로 진단기를 통해 진단
+
 4. OTA 기능
+
 5. RTOS를 통한 실시간 제어 및 태스크, 자원 관리
 
 
