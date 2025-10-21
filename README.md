@@ -61,6 +61,42 @@
 <img width="545" height="280" alt="Image" src="https://github.com/user-attachments/assets/1ce096bb-3460-4f21-b528-a60b11ac94bc" />
 <img width="798" height="657" alt="Image" src="https://github.com/user-attachments/assets/80d517da-3efa-4957-92e0-50fa2da8b0c7" />
 
+### OTA Architecutre
+
+<img width="515" height="328" alt="Image" src="https://github.com/user-attachments/assets/72d3a206-6fc9-4861-9666-9fd56efcc0ea" />
+
+<img width="1000" height="308" alt="Image" src="https://github.com/user-attachments/assets/f0b65fc5-ff2c-42e5-a7d9-2905fa32e36f" />
+
+### Diagnostics Architecture
+
+<img width="503" height="342" alt="Image" src="https://github.com/user-attachments/assets/16f7a0e6-69bf-445b-a66e-78e43eb00918" />
+
+### Body Diagnostics
+
+<img width="812" height="397" alt="Image" src="https://github.com/user-attachments/assets/cdea38f6-3eb1-4d0f-828d-688dfcd42c47" />
+
+### Chassis Diagnostics
+
+<img width="820" height="456" alt="Image" src="https://github.com/user-attachments/assets/1ec27148-0d7a-47ca-836b-0963f5a41fdf" />
+
+### Diagnostics
+
+
+
+### CAN DBC
+
+<img width="727" height="355" alt="Image" src="https://github.com/user-attachments/assets/11701b46-b109-470c-a38f-411366b55cac" />
+
+
+### RTOS
+
+<img width="868" height="417" alt="Image" src="https://github.com/user-attachments/assets/92edc8db-2d05-4d28-af7e-7c9cf60d410e" />
+
+<img width="511" height="417" alt="Image" src="https://github.com/user-attachments/assets/1354579d-c79c-4b68-88bb-4a6f844ce76f" />
+
+<img width="891" height="432" alt="Image" src="https://github.com/user-attachments/assets/28a1e889-8005-4c81-be38-6aa48c711466" />
+
+
 <br>
 
 
