@@ -53,8 +53,13 @@
 
 ## Architecture
 
-<img width="687" height="334" alt="image" src="https://github.com/user-attachments/assets/0ac4349c-70eb-47a2-a633-847e904e6932" />
-<img width="909" height="282" alt="image" src="https://github.com/user-attachments/assets/8702eda1-40b0-4da4-bb35-081e4fa26bae" />
+### SYSTEM Architecture
+<img width="677" height="457" alt="Image" src="https://github.com/user-attachments/assets/5abaef62-585d-4773-bde2-c3e5b1fd21a9" />
+
+### SOME/IP Architecture
+
+<img width="545" height="280" alt="Image" src="https://github.com/user-attachments/assets/1ce096bb-3460-4f21-b528-a60b11ac94bc" />
+<img width="798" height="657" alt="Image" src="https://github.com/user-attachments/assets/80d517da-3efa-4957-92e0-50fa2da8b0c7" />
 
 <br>
 
