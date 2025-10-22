@@ -34,6 +34,18 @@
             My_Mqtt.cpp
             Ipconfig.cpp
             Ipconfig.h
+            ScanSelectionWindow.h
+            ScanSelectionWindow.cpp
+            sensordatawindow.h
+            sensordatawindow.cpp
+            UDS.h
+            UDS.cpp
+            Did_Type.h
+            Did_Type.cpp
+            actuationtestwindow.cpp
+            actuationtestwindow.h
+            modifywindow.h
+            modifywindow.cpp
     )
 
     if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

@@ -3,5 +3,7 @@
         <file>scan_tech.png</file>
         <file>data_saved.png</file>
         <file>Autoever.jpg</file>
+        <file>GIT_Background.jpg</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>

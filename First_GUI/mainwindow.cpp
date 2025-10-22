@@ -7,9 +7,10 @@
 #include "Ipconfig.h"
 #include <QMessageBox>
 #include <QFileDialog> // 파일 대화상자를 위해 필요
-
+#include "ScanSelectionWindow.h"
+#include <QDebug>
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), dtcWindow(nullptr), connectionTimer(nullptr),progressDialog(nullptr), isShowingDialog(false) // dtcWindow 포인터를 nullptr로 초기화
+    : QMainWindow(parent), m_selectionWindow(nullptr), connectionTimer(nullptr),progressDialog(nullptr), isShowingDialog(false) // dtcWindow 포인터를 nullptr로 초기화
 {
 
     // this : Parent
@@ -78,6 +79,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // --- MQTT ---
     mqttHandler = new MqttHandler("MyQtClient", this);
+    savedDataButton->setEnabled(false);
 
     // MqttHandler signal action
     // send object, signal, action object, Function
@@ -87,24 +89,26 @@ MainWindow::MainWindow(QWidget *parent)
     QTimer::singleShot(0, this, &MainWindow::startMqttConnection);
 
     // "스캔테크" 버튼 클릭 시 DTC 창을 열도록 시그널-슬롯 연결
-    connect(scanTechButton, &QToolButton::clicked, this, &MainWindow::openDTCWindow);
+    connect(scanTechButton, &QToolButton::clicked, this, &MainWindow::on_scanButton_clicked);
     connect(OTAButton, &QToolButton::clicked, this, &MainWindow::onOtaButtonClicked);
 }
 
 MainWindow::~MainWindow() {
-
+    delete m_selectionWindow;
 }
 
 // DTC 창을 여는 슬롯 함수 구현
-void MainWindow::openDTCWindow() {
+void MainWindow::on_scanButton_clicked() {
     //Mqtt Command
-    std::cout << "Scan button clicked. Publishing MQTT message..." << std::endl;
-    mqttHandler->publishMessage("hello/topic", "READ_DTC");
+    std::cout << "Scan button clicked." << std::endl;
+    //mqttHandler->publishMessage("hello/topic", "READ_DTC");
 
-    if (!dtcWindow) {
-        dtcWindow = new DTCWindow();
+    if (!m_selectionWindow) {
+        m_selectionWindow = new ScanSelectionWindow(this->mqttHandler,  nullptr);
     }
-    dtcWindow->show(); // 창 보여주기
+
+    m_selectionWindow->show(); // 창 보여주기
+
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event) {
@@ -130,37 +134,37 @@ void MainWindow::onMqttConnected() {
 void MainWindow::onMqttDisconnected() {
     std::cout << "MainWindow: Received disconnected signal from MqttHandler." << std::endl;
 
-    if (isShowingDialog) {
-            return; // 이미 대화상자가 떠 있다면 아무것도 하지 않고 함수 종료
-    }
-    if (connectionTimer && connectionTimer->isActive()) {
-            connectionTimer->stop();
-    }
-    // "연결 중" 대화상자가 있었다면 먼저 닫아줍니다.
-    if (progressDialog) {
-        progressDialog->close();
-    }
+//    if (isShowingDialog) {
+//            return; // 이미 대화상자가 떠 있다면 아무것도 하지 않고 함수 종료
+//    }
+//    if (connectionTimer && connectionTimer->isActive()) {
+//            connectionTimer->stop();
+//    }
+//    // "연결 중" 대화상자가 있었다면 먼저 닫아줍니다.
+//    if (progressDialog) {
+//        progressDialog->close();
+//    }
 
-    isShowingDialog = true;
-    QMessageBox msgBox(this);
-    msgBox.setWindowTitle("Connection Fail");
-    msgBox.setText("Can not connect MQTT Broker.");
-    msgBox.setInformativeText("Retry?");
-    msgBox.setIcon(QMessageBox::Critical);
-    msgBox.setStandardButtons(QMessageBox::Retry | QMessageBox::Close); // '다시 시도'와 '닫기' 버튼 추가
-    msgBox.setDefaultButton(QMessageBox::Retry); // '다시 시도'를 기본값으로 설정
+//    isShowingDialog = true;
+//    QMessageBox msgBox(this);
+//    msgBox.setWindowTitle("Connection Fail");
+//    msgBox.setText("Can not connect MQTT Broker.");
+//    msgBox.setInformativeText("Retry?");
+//    msgBox.setIcon(QMessageBox::Critical);
+//    msgBox.setStandardButtons(QMessageBox::Retry | QMessageBox::Close); // '다시 시도'와 '닫기' 버튼 추가
+//    msgBox.setDefaultButton(QMessageBox::Retry); // '다시 시도'를 기본값으로 설정
 
-    int reply = msgBox.exec(); // 사용자가 버튼을 누를 때까지 대기
-    isShowingDialog = false;
+//    int reply = msgBox.exec(); // 사용자가 버튼을 누를 때까지 대기
+//    isShowingDialog = false;
 
-    // 사용자의 선택에 따라 동작
-    if (reply == QMessageBox::Retry) {
-        // '다시 시도'를 누르면 연결 함수를 다시 호출
-        startMqttConnection();
-    } else {
-        // '닫기'를 누르면 프로그램 종료
-        close();
-    }
+//    // 사용자의 선택에 따라 동작
+//    if (reply == QMessageBox::Retry) {
+//        // '다시 시도'를 누르면 연결 함수를 다시 호출
+//        startMqttConnection();
+//    } else {
+//        // '닫기'를 누르면 프로그램 종료
+//        close();
+//    }
 }
 
 void MainWindow::startMqttConnection() {
@@ -197,29 +201,48 @@ void MainWindow::showSuccessMessage()
 void MainWindow::onOtaButtonClicked()
 {
     if (!mqttHandler || !mqttHandler->isConnected()) {
-        QMessageBox::warning(this, "연결 오류", "MQTT 브로커에 연결되지 않았습니다.");
+        QMessageBox::warning(this, "Connect Error", "MQTT Broker failed.");
         return;
     }
 
-    // 1. 파일 열기 대화상자를 띄워 사용자로부터 펌웨어 파일을 선택받습니다.
     QString filePath = QFileDialog::getOpenFileName(
         this,
-        tr("Select"),
-        "", // 시작 디렉토리
-        tr("Firmware(*.bin *.hex);;All Files (*.*)") // 파일 필터
+        tr("Select Firmware"),
+        "",
+        tr("Firmware Files (*.bin *.hex);;All Files (*.*)")
     );
 
-    // 2. 사용자가 파일을 선택했는지 확인합니다. (취소 버튼을 누르면 filePath는 비어있음)
-    if (filePath.isEmpty()) {
-        return; // 아무 파일도 선택하지 않았으므로 함수 종료
-    }
+    if (filePath.isEmpty()) return;
 
-    // 3. MqttHandler의 sendFile 함수는 std::string을 인자로 받으므로 QString을 변환합니다.
     std::string stdFilePath = filePath.toStdString();
+    std::cout << "[OTA] OTA Process ON" << std::endl;
 
-    // 4. MQTT를 통해 파일 전송을 시작합니다. 토픽은 OTA용으로 지정하는 것이 좋습니다.
+    // 1️⃣ Diagnostic Session Control (0x10 02)
+    const char* sessionStart = "\x10\x02";
+    mqttHandler->publish(nullptr, "ota/command", 2, sessionStart);
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
+
+    // 2️⃣ Request Download (0x34)
+    const char* requestDownload = "\x34\x00\x44\x00\x00\x00\x00\x10";
+    mqttHandler->publish(nullptr, "ota/command", 8, requestDownload);
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
+
+    // 3️⃣ Transfer Data (sendFile)
     mqttHandler->sendFile("ota/firmware", stdFilePath);
 
-    // 사용자에게 전송 시작을 알리는 메시지 박스 (선택 사항)
-    QMessageBox::information(this, "TP start", "STARTING.\n" + filePath);
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
+    // 4️⃣ Request Transfer Exit (0x37)
+    const char* transferExit = "\x37";
+    mqttHandler->publish(nullptr, "ota/command", 1, transferExit);
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
+
+    // 5️⃣ ECU Reset (0x11 01)
+    const char* ecuReset = "\x11\x01";
+    mqttHandler->publish(nullptr, "ota/command", 2, ecuReset);
+
+    QMessageBox::information(this, "OTA 완료", "UDS OTA 전송 절차가 완료되었습니다.\n" + filePath);
 }
