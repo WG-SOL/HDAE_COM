@@ -1,0 +1,19 @@
+# Flutter build outputs
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+*.apk
+*.aar
+*.aab
+*.iml
+
+# Android
+*.gradle
+local.properties
+
+# iOS
+Pods/
+DerivedData/
