@@ -30,10 +30,11 @@
 #define DOIP_PAYLOAD_TYPE_DIAG_MSG       (0x8001U)
 
 #define DOIP_ROUTING_ACK_SUCCESS             (0x10U)
+#define DOIP_UDS_SID_READ_DTC_INFO           (0x19U)
 #define DOIP_UDS_SID_READ_DATA_BY_ID         (0x22U)
 #define DOIP_UDS_SID_IO_CONTROL_BY_ID        (0x2FU)
 #define DOIP_UDS_SID_WRITE_DATA_BY_ID        (0x2EU)
-#define DOIP_UDS_SID_DIAGNOSTIC_SESSION    (0x10U)
+#define DOIP_UDS_SID_DIAGNOSTIC_SESSION      (0x10U)
 #define DOIP_UDS_SID_POSITIVE_OFFSET         (0x40U)
 
 #define DOIP_DID_TOF                         (0x1001U)
@@ -42,12 +43,15 @@
 #define DOIP_DID_MOTOR_CONTROL               (0x4000U)
 #define DOIP_DID_AEB_STOP_THRESHOLD           (0x2001U)
 
+#define DOIP_DTC_TOF_CAN_TIMEOUT             (0x010001UL)
+#define DOIP_DTC_STATUS_LATCH                (0x29U)
+#define DOIP_TOF_TIMEOUT_MS                  (2000U)
+
 #define UDS_NRC_SERVICE_NOT_SUPPORTED        (0x11U)
 #define UDS_NRC_SUBFUNCTION_NOT_SUPPORTED    (0x12U)
 #define UDS_NRC_INCORRECT_MESSAGE_LENGTH     (0x13U)
 #define UDS_NRC_REQUEST_OUT_OF_RANGE         (0x31U)
-#define UDS_NRC_SUBFUNCTION_NOT_ACTIVE     (0x7EU)
-#define DOIP_DIAG_SESSION_TIMEOUT_MS        (30000U)
+#define UDS_NRC_SUBFUNCTION_NOT_ACTIVE       (0x7EU)
 #define UDS_NRC_CONDITIONS_NOT_CORRECT      (0x22U)
 
 typedef enum
@@ -69,6 +73,8 @@ typedef struct
 
 static struct tcp_pcb *s_doipPcb = NULL;
 static bool s_initScheduled = false;
+static bool s_dtcTofLatched = false;
+static uint8_t s_dtcTofStatus = 0U;
 
 static void doip_init_on_tcpip(void *arg);
 static err_t doip_accept(void *arg, struct tcp_pcb *newpcb, err_t err);
@@ -84,11 +90,46 @@ static struct pbuf *doip_make_diag_response(uint16_t client_sa, const uint8_t *u
 static struct pbuf *doip_handle_sid_dsc(uint16_t client_sa, const uint8_t *diag, uint32_t diag_len);
 static struct pbuf *doip_handle_sid_wdbi(uint16_t client_sa, const uint8_t *diag, uint32_t diag_len);
 static struct pbuf *doip_handle_sid_rdbi(uint16_t client_sa, const uint8_t *diag, uint32_t diag_len);
+static struct pbuf *doip_handle_sid_rdi(uint16_t client_sa, const uint8_t *diag, uint32_t diag_len);
 static struct pbuf *doip_handle_sid_iocbi(uint16_t client_sa, const uint8_t *diag, uint32_t diag_len);
 static struct pbuf *doip_make_pos_rdbi(uint16_t client_sa, uint16_t did, const uint8_t *value, uint8_t value_len);
 static struct pbuf *doip_make_pos_iocbi(uint16_t client_sa, uint16_t did);
 static struct pbuf *doip_make_nrc(uint16_t client_sa, uint8_t sid, uint8_t nrc);
 static bool doip_fill_rdbi_payload(uint16_t did, uint8_t *out_buf, uint8_t *out_len);
+static void doip_update_tof_dtc_latch(void);
+
+static void doip_update_tof_dtc_latch(void)
+{
+    if (s_dtcTofLatched)
+    {
+        return;
+    }
+
+    const TickType_t now = xTaskGetTickCount();
+    const TickType_t timeoutTicks = pdMS_TO_TICKS(DOIP_TOF_TIMEOUT_MS);
+    TofSample sample = {0};
+    bool hasSample = AppShared_GetTof(&sample);
+    bool timedOut = false;
+
+    if (hasSample)
+    {
+        if ((now - sample.timestamp) >= timeoutTicks)
+        {
+            timedOut = true;
+        }
+    }
+    else if (now >= timeoutTicks)
+    {
+        timedOut = true;
+    }
+
+    if (timedOut)
+    {
+        s_dtcTofLatched = true;
+        s_dtcTofStatus = DOIP_DTC_STATUS_LATCH;
+        my_printf("DTC latched: ToF CAN timeout (0x%06lX)\n", (unsigned long)DOIP_DTC_TOF_CAN_TIMEOUT);
+    }
+}
 
 void AppDoIP_Init(void)
 {
@@ -495,6 +536,8 @@ static struct pbuf *doip_build_response(const struct pbuf *request, uint16_t *ou
             {
                 case DOIP_UDS_SID_DIAGNOSTIC_SESSION:
                     return doip_handle_sid_dsc(client_sa, diag, diag_len);
+                case DOIP_UDS_SID_READ_DTC_INFO:
+                    return doip_handle_sid_rdi(client_sa, diag, diag_len);
                 case DOIP_UDS_SID_WRITE_DATA_BY_ID:
                     return doip_handle_sid_wdbi(client_sa, diag, diag_len);
                 case DOIP_UDS_SID_READ_DATA_BY_ID:
@@ -579,6 +622,49 @@ static struct pbuf *doip_handle_sid_dsc(uint16_t client_sa, const uint8_t *diag,
         default:
             return doip_make_nrc(client_sa, DOIP_UDS_SID_DIAGNOSTIC_SESSION, UDS_NRC_SUBFUNCTION_NOT_SUPPORTED);
     }
+}
+
+static struct pbuf *doip_handle_sid_rdi(uint16_t client_sa, const uint8_t *diag, uint32_t diag_len)
+{
+    if (diag_len < 3U)
+    {
+        return doip_make_nrc(client_sa, DOIP_UDS_SID_READ_DTC_INFO, UDS_NRC_INCORRECT_MESSAGE_LENGTH);
+    }
+
+    uint8_t subFunction = diag[1];
+    if (subFunction != 0x02U)
+    {
+        return doip_make_nrc(client_sa, DOIP_UDS_SID_READ_DTC_INFO, UDS_NRC_SUBFUNCTION_NOT_SUPPORTED);
+    }
+
+    uint8_t statusMask = diag[2];
+    doip_update_tof_dtc_latch();
+
+    uint8_t uds_payload[8] = {0};
+    uds_payload[0] = (uint8_t)(DOIP_UDS_SID_READ_DTC_INFO + DOIP_UDS_SID_POSITIVE_OFFSET);
+    uds_payload[1] = subFunction;
+    uds_payload[2] = 0xFFU; /* statusAvailabilityMask */
+    uds_payload[3] = statusMask;
+
+    uint8_t uds_len = 4U;
+    uint8_t dtcCount = 0U;
+
+    if (s_dtcTofLatched && ((s_dtcTofStatus & statusMask) != 0U))
+    {
+        uds_payload[4] = (uint8_t)((DOIP_DTC_TOF_CAN_TIMEOUT >> 16) & 0xFFU);
+        uds_payload[5] = (uint8_t)((DOIP_DTC_TOF_CAN_TIMEOUT >> 8) & 0xFFU);
+        uds_payload[6] = (uint8_t)(DOIP_DTC_TOF_CAN_TIMEOUT & 0xFFU);
+        uds_payload[7] = s_dtcTofStatus;
+        uds_len = 8U;
+        dtcCount = 1U;
+    }
+
+    my_printf("DoIP RX: SID=0x19 SUB=0x%02X MASK=0x%02X, DTCs=%u\n",
+              (unsigned)subFunction,
+              (unsigned)statusMask,
+              (unsigned)dtcCount);
+
+    return doip_make_diag_response(client_sa, uds_payload, uds_len);
 }
 
 static struct pbuf *doip_make_pos_rdbi(uint16_t client_sa, uint16_t did, const uint8_t *value, uint8_t value_len)
